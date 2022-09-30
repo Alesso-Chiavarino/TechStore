@@ -1,4 +1,4 @@
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import {Component} from 'react';
 import Brand from "./components/Brand/Brand";
@@ -19,7 +19,7 @@ export default class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <NavBar options = {this.state.options} />
-                    {/* <ItemListContainer greeting= "Hola Mundo! , se centrar un div ;)"/> */}
+                    <ItemListContainer greeting= "Hola Mundo! , se centrar un div ;)"/>
                 </header>
             </div>
         )

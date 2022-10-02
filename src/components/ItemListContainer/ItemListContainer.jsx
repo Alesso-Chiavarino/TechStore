@@ -1,6 +1,7 @@
 import { getProducts } from '../../asyncMock';
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
+import './ItemListContainer.css'
 
 const ItemListContainer = () => {
 
@@ -17,10 +18,12 @@ const ItemListContainer = () => {
     }
 
     return(
-        <div className='d-flex justify-content-center flex-column align-items-center' >
-            <h1 className='mt-3'>listado de productos</h1>
-            <ItemList products = {products} />
-        </div>
+        <>
+            <h1 className='text-center mt-3'>listado de productos</h1>
+            <div>
+                <ItemList products = {products} />
+            </div>
+        </>    
     )
 }
 

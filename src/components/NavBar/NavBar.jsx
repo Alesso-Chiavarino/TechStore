@@ -1,8 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav, Offcanvas } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget';
 import Brand from '../Brand/Brand';
 import MenuList from '../MenuList/MenuList';
+import './NavBar.css'
 
 const NavBar = ({options}) => {
     return (

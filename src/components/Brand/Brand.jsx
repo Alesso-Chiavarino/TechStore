@@ -1,11 +1,8 @@
-// import { Component, useState } from "react";
+import './Brand.css'
 
 const Brand = (props) => {
-
-    // const [title, setTitle] = useState('TecnoHouse');
-
     return (
-        <h3 style={{fontSize: "20px", margin: "0px"}} >{props.title}</h3>
+        <h3 className='brand'> {props.title} </h3>
     );
 };
 

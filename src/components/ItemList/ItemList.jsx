@@ -1,11 +1,12 @@
 import Item from "../Item/Item"
+import './ItemList.css'
 
 const ItemList = ({ products }) => {
     
     return (
-        <article className="d-flex mt-3">
+        <ul className="contCard">
             {products.map(prod =>  <Item key={prod.id} {...prod} />)}
-        </article>
+        </ul>
     )
 }
 export default ItemList

@@ -1,0 +1,23 @@
+.card {
+    margin: 20px 20px 20px 0;
+    width: 250px;
+}
+
+.contCardImg {
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.cardImg {
+    width: 150px;
+    height: 150px;
+}
+
+.cardTitle {
+    font-size: 18px;
+}
+
+.cardText {
+    font-size: 18px;
+}

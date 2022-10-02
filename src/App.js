@@ -8,18 +8,16 @@ export default class App extends Component {
     options = ["Inicio", "Productos", "Contacto"];
 
     constructor() {
-        super(); //para ejecutar el constructor
+        super();
         this.state = {options: this.options}
     }
-
-    cambiar
 
     render() {
         return (
             <div className="App">
                 <header className="App-header">
                     <NavBar options = {this.state.options} />
-                    <ItemListContainer greeting= "Hola Mundo! , se centrar un div ;)"/>
+                    <ItemListContainer/>
                 </header>
             </div>
         )

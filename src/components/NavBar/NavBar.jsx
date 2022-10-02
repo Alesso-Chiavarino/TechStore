@@ -2,17 +2,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, NavDropdown, Offcanvas, Form, FormControl, Button } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget';
 import Brand from '../Brand/Brand';
-import ItemList from '../ItemList/ItemList';
+import MenuList from '../MenuList/MenuList';
 
 const NavBar = ({options}) => {
     return (
         <>
             <Navbar bg="dark" expand={false}>
                 <Container fluid>
-                    <Navbar.Brand href="#" className='text-white fw-bold fst-italic'><Brand title= "TecnoHouse" /></Navbar.Brand>
+                    <Navbar.Brand href="#" className='text-white fw-bold fst-italic'><Brand title= "ChupiHouse" /></Navbar.Brand>
                     <Nav style={{flexDirection: "row"}} className="d-flex">
                         <ul className='d-flex m-0' >
-                            {options.map((op, i) => <ItemList key={i} option= {op}/>)}
+                            {options.map((op, i) => <MenuList key={i} option= {op}/>)}
                         </ul>
                     </Nav>
                     <Navbar.Toggle className='shadow-none border-0' aria-controls="offcanvasNavbar" ><span style={{color:"#fff"}}><CartWidget/></span></Navbar.Toggle>

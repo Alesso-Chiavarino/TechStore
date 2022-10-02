@@ -1,14 +1,11 @@
+import Item from "../Item/Item"
 
-
-const ItemList = ({option}) => {
-
-    // const array[] = 
-
+const ItemList = ({ products }) => {
+    
     return (
-        <li>
-            <a className="text-white text-decoration-none mx-3" href="./">{option}</a>
-        </li>
-    );
-};
-
-export default ItemList;
+        <article className="d-flex mt-3">
+            {products.map(prod =>  <Item key={prod.id} {...prod} />)}
+        </article>
+    )
+}
+export default ItemList

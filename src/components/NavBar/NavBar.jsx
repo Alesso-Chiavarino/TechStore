@@ -8,9 +8,9 @@ import './NavBar.css'
 const NavBar = ({options}) => {
     return (
         <>
-            <Navbar bg="dark" expand={false}>
+            <Navbar className='navBar' bg="dark" expand={false}>
                 <Container fluid>
-                    <Navbar.Brand href="#" className='text-white fw-bold fst-italic'><Brand title= "ChupiHouse" /></Navbar.Brand>
+                    <Navbar.Brand href="#" className='text-white fw-bold fst-italic'><Brand img="../../img/icono.png" title= "TecnoHouse" /></Navbar.Brand>
                     <Nav style={{flexDirection: "row"}} className="d-flex">
                         <ul className='d-flex m-0' >
                             {options.map((op, i) => <MenuList key={i} option= {op}/>)}

@@ -1,8 +1,10 @@
 import './Brand.css'
 
-const Brand = (props) => {
+const Brand = ( {img, title} ) => {
     return (
-        <h3 className='brand'> {props.title} </h3>
+        <div className='contIcono'>
+            <img className='icono' src={img} alt={title + ' icon'} /><h3 className='brand'> {title} </h3>
+        </div>
     );
 };
 

@@ -1,7 +1,7 @@
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import {Component} from 'react';
-import Brand from "./components/Brand/Brand";
+import Slider from "./components/Slider/Slider";
 
 export default class App extends Component {
 
@@ -17,6 +17,7 @@ export default class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <NavBar options = {this.state.options} />
+                    <Slider/>
                     <ItemListContainer/>
                 </header>
             </div>

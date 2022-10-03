@@ -1,27 +1,33 @@
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
-import {Component} from 'react';
-import Slider from "./components/Slider/Slider";
+// import {Component} from 'react';
+// import Slider from "./components/Slider/Slider";
+// import ShowProducts from "./components/ShowProducts/ShowProducts";
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from "./components/Home/Home";
+import Products from "./components/Products/Products";
 
-export default class App extends Component {
+const App = () => {
 
-    options = ["Inicio", "Productos", "Contacto"];
+    const options = [{
+        section: "Inicio",
+        route: "./"
+    }, {
+        section: "Productos",
+        route: "./products"
+    }, {
+        section: "Contacto",
+        route: "./contact"
+    }];
 
-    constructor() {
-        super();
-        this.state = {options: this.options}
-    }
-
-    render() {
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <NavBar options = {this.state.options} />
-                    <Slider/>
-                    <ItemListContainer/>
-                </header>
-            </div>
-        )
-    }
-   
+    return (
+        <BrowserRouter>
+            <NavBar options={options} />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products />} />
+            </Routes>
+        </BrowserRouter>
+    )
 }
+export default App;

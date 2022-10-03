@@ -1,11 +1,12 @@
 import './MenuList.css'
-
-const MenuList = ({option}) => {
+import {Link} from 'react-router-dom'
+ 
+const MenuList = ({section, route}) => {
 
 
     return (
         <li style={{listStyle: "none"}} >
-            <a className="text-white text-decoration-none mx-3" href="./">{option}</a>
+            <Link className="text-white text-decoration-none mx-3" to={route}> {section} </Link>
         </li>
     );
 };

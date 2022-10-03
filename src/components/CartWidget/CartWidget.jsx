@@ -4,7 +4,7 @@ import './CartWidget.css'
 
 const CartWidget = () => {
     return (
-        <FontAwesomeIcon icon={faCartShopping} />
+        <FontAwesomeIcon className='iconoCarrito' icon={faCartShopping} />
     )
 }
 

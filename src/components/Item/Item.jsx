@@ -15,7 +15,7 @@ const Item = ( {nombre, precio, categoria, imagen} ) => {
           <Card.Text className='cardText'>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
-            <p className='text-end fw-bold' >{' $' + precio}</p>
+            <span className='text-end d-block fw-bold' >{' $' + precio}</span>
             
           </Card.Text>
           <Button variant="dark">Add to cart</Button>

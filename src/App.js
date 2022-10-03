@@ -1,5 +1,6 @@
 // import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
+import Eror404 from "./components/Eror404/Eror404";
 // import {Component} from 'react';
 // import Slider from "./components/Slider/Slider";
 // import ShowProducts from "./components/ShowProducts/ShowProducts";
@@ -26,6 +27,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
+                <Route path="*" element={<Eror404/>} />
             </Routes>
         </BrowserRouter>
     )

@@ -2,6 +2,7 @@ import { getProducts } from '../../asyncMock';
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
+import Loader from '../Loader/Loader';
 
 const ItemListContainer = () => {
 
@@ -13,8 +14,9 @@ const ItemListContainer = () => {
             setProducts(res)
         }).finally(() => setLoading(false))
         }, [])
+        
     if(loading) {
-        return <h1>Loading...</h1>
+        return <Loader/>
     }
 
     return(

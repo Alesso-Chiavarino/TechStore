@@ -1,0 +1,43 @@
+.contIC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    width: 90px;
+    max-width: 50%;
+    float: left;
+    padding-right: 7.5px;
+    border: 1px solid #2020209c;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.counterIC {
+    font-size: 20px;
+}
+
+.leftSideCounterIC {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.rightSideCounterIC {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnIC {
+    background-color: transparent;
+    border: none;
+}
+
+.arrowIC {
+    color: #202020;
+}
+
+
+
+/* font-family: "Montserrat Regular",sans-serif; */

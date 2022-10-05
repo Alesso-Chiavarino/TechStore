@@ -11,7 +11,7 @@ const Eror404 = () => {
                 <Link className='btn btn-dark d-block w-25 mt-3' to='/'> Ir a Inicio </Link>
             </div>
             <div>
-                <img className='imgEror' src="../../img/notfound.svg" alt="lol"/>
+                <img className='imgEror' src="./img/notfound.svg" alt="lol"/>
             </div>
         </div>
     )

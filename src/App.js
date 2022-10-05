@@ -7,6 +7,7 @@ import Eror404 from "./components/Eror404/Eror404";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 const App = () => {
 
@@ -26,9 +27,11 @@ const App = () => {
             <NavBar options={options} />
             <Routes>
                 <Route path="/" element={<Home />} />
+                {/* <Route path="/" element={<ItemDetailContainer/>} /> */}
                 <Route path="/products" element={<Products />} />
                 <Route path="*" element={<Eror404/>} />
             </Routes>
+            {/* <ItemDetailContainer/> */}
         </BrowserRouter>
     )
 }

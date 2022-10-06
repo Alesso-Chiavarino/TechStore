@@ -7,11 +7,11 @@ const ItemCount = ({initial, stock}) => {
     const [counter, setCounter] = useState(0)
 
     const add = () => {
-        counter < stock && setCounter(counter+1)
+        counter < stock && setCounter(counter + 1)
     }
 
     const subtract = () => {
-        counter > initial && setCounter(counter-1)
+        counter > initial && setCounter(counter - 1)
     }
 
     return (

@@ -17,7 +17,7 @@ const NavBar = ({options}) => {
                             {options.map((op, i) => <MenuList key={i} section= {op.section} route = {op.route} />)}
                         </ul>
                     </Nav>
-                    <Navbar.Toggle className='shadow-none border-0' aria-controls="offcanvasNavbar" ><span style={{color:"#fff"}}><CartWidget/> <Counter value="0" /> </span></Navbar.Toggle>
+                    <Navbar.Toggle className='shadow-none border-0' aria-controls="offcanvasNavbar" ><span style={{color:"#fff"}}><CartWidget/> <Counter value={0} /> </span></Navbar.Toggle>
                     <Navbar.Offcanvas
                         className="bg-white"
                         id="offcanvasNavbar"

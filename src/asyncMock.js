@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {
         "id": 1,
         "nombre": "Asus Tuf Gaming Nvidia Geforce Rtx 3090",
@@ -541,10 +541,10 @@ const products = [
     }
 ]
 
-export const getProducts = () => {
-    return new Promise((res) => {
-        setTimeout(() => {
-            res(products)
-        }, 1000)
-    })
-} 
+// export const getProducts = () => {
+//     return new Promise((res) => {
+//         setTimeout(() => {
+//             res(products)
+//         }, 1000)
+//     })
+// } 

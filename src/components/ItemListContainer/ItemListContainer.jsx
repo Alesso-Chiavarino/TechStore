@@ -1,19 +1,28 @@
-import { getProducts } from '../../asyncMock';
+import { products } from '../../asyncMock';
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
 import Loader from '../Loader/Loader';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
-    const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [prods, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {categoryName} = useParams();
 
     useEffect(() => {
-        getProducts().then(res => {
-            setProducts(res)
-        }).finally(() => setLoading(false))
-        }, [])
+        const getProducts = () => {
+            return new Promise((res) => {
+                const filteredProds = products.filter(prod => prod.categoria === categoryName)
+                setTimeout(() => {
+                    res(categoryName? filteredProds : products)
+                }, 500)
+            })} 
+        getProducts()
+            .then(res => setProducts(res))
+            .finally(() => setLoading(false))
+        }, [categoryName])
         
     if(loading) {
         return <Loader/>
@@ -23,7 +32,7 @@ const ItemListContainer = () => {
         <>
             <h1 className='text-center mt-3'>listado de productos</h1>
             <div>
-                <ItemList products = {products} />
+                <ItemList products = {prods} />
             </div>
         </>    
     )

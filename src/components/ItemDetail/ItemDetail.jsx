@@ -18,12 +18,18 @@ const ItemDetail = ({product}) => {
                         <div className='payWith'>
                             <span className='messageID' >Medios de pago</span>
                             <div className='contIconsID'>
-                                <img className='mercadoPagoIcon' src="./img/mercado-pago.webp" alt="mercado-pago-icon" />
+                                {/* <img className='mercadoPagoIcon' src="./img/mercado-pago.webp" alt="mercado-pago-icon" />
                                 <img className='visaIcon' src="./img/visa.webp" alt="visa-icon" />
                                 <img className='naranjaIcon' src="./img/naranja.svg" alt="naranja-icon" />
                                 <img className='americanExpressIcon' src="./img/american-express.png" alt="american-express-icon" />
                                 <img className='brubankIcon' src="./img/brubank.png" alt="brubank-icon" />
-                                <img className='mastercardIconn' src="./img/mastercard.png" alt="mastercard-icon" />
+                                <img className='mastercardIconn' src="./img/mastercard.png" alt="mastercard-icon" /> */}
+                                <img className='mercadoPagoIcon' src="https://res.cloudinary.com/dotaebdx8/image/upload/v1664993603/ecommerceReact/mercado-pago_hn3hsl.webp" alt="mercado-pago-icon" />
+                                <img className='visaIcon' src="https://res.cloudinary.com/dotaebdx8/image/upload/v1664993671/ecommerceReact/visa_jlvgvq.webp" alt="visa-icon" />
+                                <img className='naranjaIcon' src="https://res.cloudinary.com/dotaebdx8/image/upload/v1664993649/ecommerceReact/naranja_ira7vs.svg" alt="naranja-icon" />
+                                <img className='americanExpressIcon' src="https://res.cloudinary.com/dotaebdx8/image/upload/v1664993525/ecommerceReact/american-express_vuas8z.png" alt="american-express-icon" />
+                                <img className='brubankIcon' src="https://res.cloudinary.com/dotaebdx8/image/upload/v1664993534/ecommerceReact/brubank_x24iod.png" alt="brubank-icon" />
+                                <img className='mastercardIconn' src="https://res.cloudinary.com/dotaebdx8/image/upload/v1664993585/ecommerceReact/mastercard_osyyn7.png" alt="mastercard-icon" />
                             </div>
                         </div>
                         <hr />

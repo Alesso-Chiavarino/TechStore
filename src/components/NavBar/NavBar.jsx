@@ -13,10 +13,11 @@ const NavBar = ({options}) => {
                 <Container fluid>
                     <Navbar.Brand href="#" className='text-white fw-bold fst-italic'><Brand img="../../img/icono.png" title= "TecnoHouse" /></Navbar.Brand>
                     <Nav style={{flexDirection: "row"}} className="d-flex">
-                        <ul className='d-flex m-0' >
-                            {options.map((op, i) => <MenuList key={i} section= {op.section} route = {op.route} />)}
-                        </ul>
+                        {/* <ul className='d-flex m-0' >
+                            
+                        </ul> */}
                     </Nav>
+                    
                     <Navbar.Toggle className='shadow-none border-0' aria-controls="offcanvasNavbar" ><span style={{color:"#fff"}}><CartWidget/> <Counter value={0} /> </span></Navbar.Toggle>
                     <Navbar.Offcanvas
                         className="bg-white"
@@ -32,8 +33,15 @@ const NavBar = ({options}) => {
                         <Offcanvas.Body>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
+                    
                 </Container>
+                
             </Navbar>
+            <nav className='container-fluid navCategory' >
+                <ul className='d-flex justify-content-center m-0'>
+                    {options.map((op, i) => <MenuList key={i} section= {op.section} route = {op.route} />)}
+                </ul>
+            </nav>
         </>
     );
 }

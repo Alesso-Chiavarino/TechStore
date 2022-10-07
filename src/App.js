@@ -1,4 +1,4 @@
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import Eror404 from "./components/Eror404/Eror404";
 // import {Component} from 'react';
@@ -9,28 +9,42 @@ import Home from "./components/Home/Home";
 import Products from "./components/Products/Products";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
-import MercadoLibre from "./components/MercadoLibre/MercadoLibre";
+// import MercadoLibre from "./components/MercadoLibre/MercadoLibre";
 
 const App = () => {
 
-    const options = [{
+    const optionss = [{
         section: "Inicio",
-        route: "./"
+        route: "/"
     }, {
         section: "Productos",
-        route: "./products"
+        route: "/products"
     }, {
         section: "Contacto",
-        route: "./contact"
+        route: "/contact"
     }];
+
+    const options = [{
+        section: "Placas de video",
+        route: "/category/placaVideo"
+    },
+    {
+        section: "Procesadores",
+        route: "/category/procesador"
+    },
+    {
+        section: "Placas madre",
+        route: "/category/placaMadre"
+    }
+]
 
     return (
         <BrowserRouter>
             <NavBar options={options} />
             <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/detail" element={<ItemDetailContainer/>} />
-                <Route path="/products" element={<Products />} />
+                <Route path="/item/:hola" element={<ItemDetailContainer/>} />
+                <Route path="/category/:categoryName" element={<ItemListContainer/>} />
                 <Route path="*" element={<Eror404/>} />
             </Routes>
             <Footer/>

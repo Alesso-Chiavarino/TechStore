@@ -6,7 +6,7 @@ const MenuList = ({section, route}) => {
 
     return (
         <li style={{listStyle: "none", padding: "20px 15px"}} >
-            <NavLink className="text-dark text-decoration-none mx-3 linkCategory" to={route}> {section} </NavLink>
+            <NavLink className="linkCategory" to={route}> {section} </NavLink>
         </li>
     );
 };

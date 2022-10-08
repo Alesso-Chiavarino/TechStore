@@ -15,6 +15,7 @@ const ItemListContainer = () => {
         const getProducts = () => {
             return new Promise((res) => {
                 const filteredProds = products.filter(prod => prod.categoria === categoryName)
+                setLoading(true)
                 setTimeout(() => {
                     res(categoryName? filteredProds : products)
                 }, 500)
@@ -30,7 +31,7 @@ const ItemListContainer = () => {
 
     return(
         <>
-            <h1 className='text-center mt-3'>listado de productos</h1>
+            <h1 className='text-center mt-4 mb-5'>{categoryName}</h1>
             <div>
                 <ItemList products = {prods} />
             </div>

@@ -8,6 +8,7 @@ const Home = () => {
             <ShowProducts title={"TECNOHOUSE / PRODUCTOS DESTACADOS"} />
             <ShowProducts title={"TECNOHOUSE / ULTIMAS NOVEDADES"} />
             <ShowProducts title={"TECNOHOUSE / LAS MEJORES TIENDAS"} />
+            <div className="mb-5"></div>
         </>
     )
 }

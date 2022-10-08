@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-      <footer className='bg-dark mt-5'>
+      <footer className='bg-dark'>
         <div className="row container-fluid p-5 pb-1 text-white">
           <div className="col-xs-12 col-md-6 col-lg-3 padre-empresa-footer">
             {/* <a className="navbar-brand empresa-footer" href="#"><img className="icono" src="../img/icono.png" alt="" />TecnoHouse</a> */}

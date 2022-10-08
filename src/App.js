@@ -35,7 +35,31 @@ const App = () => {
     {
         section: "Placas madre",
         route: "/category/placaMadre"
-    }
+    },
+    {
+        section: "Fuentes",
+        route: "/category/fuente"
+    },
+    {
+        section: "Discos rigidos",
+        route: "/category/discoRigido"
+    },
+    {
+        section: "Discos solidos",
+        route: "/category/discoSolido"
+    },
+    {
+        section: "Coolers",
+        route: "/category/cooler"
+    },
+    {
+        section: "Discos M2",
+        route: "/category/discoM2"
+    },
+    {
+        section: "Memorias RAM",
+        route: "/category/memoriaRam"
+    },
 ]
 
     return (

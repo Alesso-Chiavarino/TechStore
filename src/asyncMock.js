@@ -5,7 +5,7 @@ export const products = [
         "precio": 470000,
         "precio2": "470.000",
         "imagen": "../img/placadevideo1.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -23,7 +23,7 @@ export const products = [
         "precio": 25000,
         "precio2": "25.000",
         "imagen": "../img/placa1.jpg",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -41,7 +41,7 @@ export const products = [
         "precio": 5000,
         "precio2": "5.000",
         "imagen": "../img/ram1.png",
-        "categoria": "memoriasRam",
+        "categoria": "memorias-ram",
         "categoryName": "Memorias Ram"
     },
     {
@@ -50,7 +50,7 @@ export const products = [
         "precio": 11000,
         "precio2": "11.000",
         "imagen": "../img/discoRigido1.jpg",
-        "categoria": "discosRigidos",
+        "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos"
     },
     {
@@ -59,7 +59,7 @@ export const products = [
         "precio": 10000,
         "precio2": "10.000",
         "imagen": "../img/discoSolido1.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -77,7 +77,7 @@ export const products = [
         "precio": 9990,
         "precio2": "9.990",
         "imagen": "../img/discom21.jpg",
-        "categoria": "discosM2",
+        "categoria": "discos-m2",
         "categoryName": "Discos M2"
     },
     {
@@ -86,7 +86,7 @@ export const products = [
         "precio": 190000,
         "precio2": "190.000",
         "imagen": "../img/placadevideo2.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -95,7 +95,7 @@ export const products = [
         "precio": 274000,
         "precio2": "274.000",
         "imagen": "../img/placadevideo3.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -104,7 +104,7 @@ export const products = [
         "precio": 69324,
         "precio2": "69.324",
         "imagen": "../img/placadevideo4.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -113,7 +113,7 @@ export const products = [
         "precio": 315499,
         "precio2": "315.499",
         "imagen": "../img/placadevideo5.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -122,7 +122,7 @@ export const products = [
         "precio": 689000,
         "precio2": "689.000",
         "imagen": "../img/placadevideo6.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -131,7 +131,7 @@ export const products = [
         "precio": 329999,
         "precio2": "329.999",
         "imagen": "../img/placadevideo7.jpg",
-        "categoria": "placasDeVideo",
+        "categoria": "placas-de-video",
         "categoryName": "Placas De Video"
     },
     {
@@ -201,7 +201,7 @@ export const products = [
         "precio2": "20.666",
         "imagen": "../img/placa2.jpg",
         "id2": "btnComprar",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -211,7 +211,7 @@ export const products = [
         "precio2": "11.499",
         "imagen": "../img/placa3.jpg",
         "id2": "btnComprar",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -221,7 +221,7 @@ export const products = [
         "precio2": "12.975",
         "imagen": "../img/placa4.jpg",
         "id2": "btnComprar",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -231,7 +231,7 @@ export const products = [
         "precio2": "49.269",
         "imagen": "../img/placa5.jpg",
         "id2": "btnComprar",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -241,7 +241,7 @@ export const products = [
         "precio2": "480.000",
         "imagen": "../img/placa6.png",
         "id2": "btnComprar",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -251,7 +251,7 @@ export const products = [
         "precio2": "121.999",
         "imagen": "../img/placa7.jpg",
         "id2": "btnComprar",
-        "categoria": "placasMadre",
+        "categoria": "placas-madre",
         "categoryName": "Placas Madre"
     },
     {
@@ -260,7 +260,7 @@ export const products = [
         "precio": 22990,
         "precio2": "22.990",
         "imagen": "../img/ram2.webp",
-        "categoria": "memoriasRam",
+        "categoria": "memorias-ram",
         "categoryName": "Memorias Ram"
     },
     {
@@ -269,7 +269,7 @@ export const products = [
         "precio": 11020,
         "precio2": "11.020",
         "imagen": "../img/ram3.jpg",
-        "categoria": "memoriasRam",
+        "categoria": "memorias-ram",
         "categoryName": "Memorias Ram"
     },
     {
@@ -278,7 +278,7 @@ export const products = [
         "precio": 16699,
         "precio2": "16.699",
         "imagen": "../img/ram4.webp",
-        "categoria": "memoriasRam",
+        "categoria": "memorias-ram",
         "categoryName": "Memorias Ram"
     },
     {
@@ -287,7 +287,7 @@ export const products = [
         "precio": 19999,
         "precio2": "19.999",
         "imagen": "../img/ram5.jpg",
-        "categoria": "memoriasRam",
+        "categoria": "memorias-ram",
         "categoryName": "Memorias Ram"
     },
     {
@@ -296,7 +296,7 @@ export const products = [
         "precio": 29819,
         "precio2": "29.819",
         "imagen": "../img/ram6.jpg",
-        "categoria": "memoriasRam",
+        "categoria": "memorias-ram",
         "categoryName": "Memorias Ram"
     },
     {
@@ -365,7 +365,7 @@ export const products = [
         "precio": 8299,
         "precio2": "8.299",
         "imagen": "../img/discoRigido2.jpg",
-        "categoria": "discosRigidos",
+        "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos"
     },
     {
@@ -374,7 +374,7 @@ export const products = [
         "precio": 9690,
         "precio2": "9.690",
         "imagen": "../img/discoRigido3.jpg",
-        "categoria": "discosRigidos",
+        "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos"
     },
     {
@@ -383,7 +383,7 @@ export const products = [
         "precio": 9999,
         "precio2": "9.999",
         "imagen": "../img/discoRigido4.jpg",
-        "categoria": "discosRigidos",
+        "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos"
     },
     {
@@ -392,7 +392,7 @@ export const products = [
         "precio": 9500,
         "precio2": "9.500",
         "imagen": "../img/discoRigido5.jpg",
-        "categoria": "discosRigidos",
+        "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos"
     },
     {
@@ -401,7 +401,7 @@ export const products = [
         "precio": 5598,
         "precio2": "5.598",
         "imagen": "../img/discoSolido2.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -410,7 +410,7 @@ export const products = [
         "precio": 4548,
         "precio2": "4.548",
         "imagen": "../img/discoSolido3.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -419,7 +419,7 @@ export const products = [
         "precio": 4899,
         "precio2": "4.899",
         "imagen": "../img/discoSolido4.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -428,7 +428,7 @@ export const products = [
         "precio": 3560,
         "precio2": "3.560",
         "imagen": "../img/discoSolido5.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -437,7 +437,7 @@ export const products = [
         "precio": 8190,
         "precio2": "8.190",
         "imagen": "../img/discoSolido6.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -446,7 +446,7 @@ export const products = [
         "precio": 18600,
         "precio2": "18.600",
         "imagen": "../img/discoSolido7.jpg",
-        "categoria": "discosSolidos",
+        "categoria": "discos-solidos",
         "categoryName": "Discos Solidos"
     },
     {
@@ -455,7 +455,7 @@ export const products = [
         "precio": 9199,
         "precio2": "9.199",
         "imagen": "../img/discom22.jpg",
-        "categoria": "discosM2",
+        "categoria": "discos-m2",
         "categoryName": "Discos M2"
     },
     {
@@ -464,7 +464,7 @@ export const products = [
         "precio": 5376,
         "precio2": "5.376",
         "imagen": "../img/discom23.jpg",
-        "categoria": "discosM2",
+        "categoria": "discos-m2",
         "categoryName": "Discos M2"
     },
     {
@@ -473,7 +473,7 @@ export const products = [
         "precio": 23990,
         "precio2": "23.990",
         "imagen": "../img/discom24.jpg",
-        "categoria": "discosM2",
+        "categoria": "discos-m2",
         "categoryName": "Discos M2"
     },
     {
@@ -482,7 +482,7 @@ export const products = [
         "precio": 11540,
         "precio2": "11.540",
         "imagen": "../img/discom25.jpg",
-        "categoria": "discosM2",
+        "categoria": "discos-m2",
         "categoryName": "Discos M2"
     },
     {
@@ -491,7 +491,7 @@ export const products = [
         "precio": 15990,
         "precio2": "15.990",
         "imagen": "../img/discom26.jpg",
-        "categoria": "discosM2",
+        "categoria": "discos-m2",
         "categoryName": "Discos M2"
     },
     {
@@ -540,11 +540,3 @@ export const products = [
         "categoryName": "Coolers"
     }
 ]
-
-// export const getProducts = () => {
-//     return new Promise((res) => {
-//         setTimeout(() => {
-//             res(products)
-//         }, 1000)
-//     })
-// } 

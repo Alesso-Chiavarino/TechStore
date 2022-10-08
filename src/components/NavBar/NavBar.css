@@ -1,11 +1,6 @@
 .navBar {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    
     z-index: 800;
-    /* background-color: #202020 !important; */
-    /* 37373F */
-    background-color: #37373F;
+    background-color: #252525 !important;
 }
 
 .navCategory {

@@ -13,16 +13,20 @@ const App = () => {
         section: "Inicio",
         route: "/"
     }, {
-        section: "Productos",
-        route: "/products"
+        section: "Quienes Somos",
+        route: "/quienes-somos"
     }, {
         section: "Contacto",
-        route: "/contact"
+        route: "/contacto"
+    },
+    {
+        section: "Terminos y Condiciones",
+        route: "/terminos-condiciones"
     }];
 
     const categories = [{
         section: "Placas de video",
-        route: "/category/placasDeVideo"
+        route: "/category/placas-de-video"
     },
     {
         section: "Procesadores",
@@ -30,7 +34,7 @@ const App = () => {
     },
     {
         section: "Placas madre",
-        route: "/category/placasMadre"
+        route: "/category/placas-madre"
     },
     {
         section: "Fuentes",
@@ -38,11 +42,11 @@ const App = () => {
     },
     {
         section: "Discos rigidos",
-        route: "/category/discosRigidos"
+        route: "/category/discos-rigidos"
     },
     {
         section: "Discos solidos",
-        route: "/category/discosSolidos"
+        route: "/category/discos-solidos"
     },
     {
         section: "Coolers",
@@ -50,11 +54,11 @@ const App = () => {
     },
     {
         section: "Discos M2",
-        route: "/category/discosM2"
+        route: "/category/discos-m2"
     },
     {
         section: "Memorias RAM",
-        route: "/category/memoriasRam"
+        route: "/category/memorias-ram"
     },
 ]
 
@@ -67,7 +71,7 @@ const App = () => {
                 <Route path="/category/:categoryName" element={<ItemListContainer/>} />
                 <Route path="*" element={<Eror404/>} />
             </Routes>
-            <Footer/>
+            <Footer links={links} />
         </BrowserRouter>
     )
 }

@@ -10,7 +10,7 @@ import {FaSearch} from 'react-icons/fa'
 const NavBar = ({categories}) => {
     return (
         <>
-            <Navbar className='navBar' bg="dark" expand={false}>
+            <Navbar className='navBar' expand={false}>
                 <Container fluid>
 
                     <Brand img="../../img/icon.png" title="TechStore"/>

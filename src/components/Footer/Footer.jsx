@@ -1,12 +1,22 @@
 import React from 'react'
+import Brand from '../Brand/Brand';
+import {NavLink} from 'react-router-dom'
+import './Footer.css'
+import {FaWhatsapp ,FaGithub, FaTwitter, FaInstagram} from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = ({links}) => {
   return (
     <>
-      <footer className='bg-dark'>
+      <div className="mt-5 container-fluid menu-container">
+        <ul className="contMenuLink mb-0" >
+          {/* en un futuro se creará un componente para estos links. */}
+          {links.map((link, i) => <li style={{ listStyle: "none" }} key={i} > <NavLink className="menuLink mx-4" to={link.route}>{link.section}</NavLink> </li>)}
+        </ul>
+      </div>
+      <footer className='footer'>
         <div className="row container-fluid p-5 pb-1 text-white">
           <div className="col-xs-12 col-md-6 col-lg-3 padre-empresa-footer">
-            {/* <a className="navbar-brand empresa-footer" href="#"><img className="icono" src="../img/icono.png" alt="" />TecnoHouse</a> */}
+            <Brand img="./img/icon.png" title="TechStore"/>
           </div>
           <div className="col-xs-12 col-md-6 col-lg-3">
             <p className="h5 mb-3">Sobre Nosotros</p>
@@ -33,19 +43,18 @@ const Footer = () => {
             <p className="h5 mb-3">Redes Sociales</p>
             <div className="mb-3">
               <p className="text-white">Seguinos en nuestras redes sociales!</p>
-              {/* <section className="redes-sociales">
-                <div className="contenedor-redes">
-                  <a className="twitter" href="https://twitter.com/Cristiano" target="_blank"><i
-                    className="fa-brands fa-twitter"></i></a>
-                  <a className="facebook" href="https://www.facebook.com/rosana.baudracco"
-                    target="_blank"><i className="fa fa-facebook"></i></a>
-                  <a className="instagram" href="https://www.instagram.com/baudraccorosana/"
-                    target="_blank"><i className="fa fa-instagram"></i></a>
-                  <a className="whatsapp" href="https://wa.me/543515524405" target="_blank"><i
-                    className="fa-brands fa-whatsapp"></i></a>
-                </div>
-              </section> */}
             </div>
+            {/* hacer componente */}
+            <section className="redes-sociales">
+                <div className="contenedor-redes">
+                    <a className="twitter" rel="noreferrer" href="https://twitter.com/alesso_1912" target="_blank"><FaTwitter/></a>
+                    <a className="github" rel="noreferrer" href="https://github.com/Alesso-Chiavarino"
+                        target="_blank"><FaGithub/></a>
+                    <a className="instagram" rel="noreferrer" href="https://www.instagram.com/alesso_chiavarino/"
+                        target="_blank"><FaInstagram/></a>
+                    <a className="whatsapp" rel="noreferrer" href="https://wa.me/3513079987" target="_blank"><FaWhatsapp/></a>
+                </div>
+            </section>
           </div>
           <div className="col-xs-12 pt-4">
             <hr />

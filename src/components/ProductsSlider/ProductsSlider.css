@@ -1,0 +1,17 @@
+.cardShow {
+    padding-left: 40px;
+}
+
+.react-multiple-carousel__arrow--right {
+    right: calc(1% + 1px) !important;
+}
+.react-multiple-carousel__arrow--right:hover {
+    background-color: #252525 !important;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(1% + 1px) !important;
+}
+.react-multiple-carousel__arrow--left:hover {
+    background-color: #252525 !important;
+}

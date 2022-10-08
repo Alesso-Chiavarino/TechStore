@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 
 // const {id} = useParams()
 
-const Item = ( {nombre, precio, categoria, imagen, id} ) => {
+const Item = ( {nombre, precio, imagen, id} ) => {
     return (
-    <li style={{listStyle: "none"}}>
       <Link className='linkItemCard' to={`/item/${id}`}>
         <Card className='card'>
             <div className='contCardImg'>
@@ -22,11 +21,10 @@ const Item = ( {nombre, precio, categoria, imagen, id} ) => {
               <span className='d-block fw-bold' >{' $' + precio}</span>
               
             </Card.Text>
-            <Button variant="dark">Add to cart</Button>
+            <Button variant="dark">Añadir al carrito</Button>
           </Card.Body>
         </Card>
       </Link>
-    </li>
     )
 }
 export default Item

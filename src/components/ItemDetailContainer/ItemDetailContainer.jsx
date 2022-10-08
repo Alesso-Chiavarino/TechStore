@@ -9,20 +9,20 @@ const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(true)
-    const {hola} = useParams()
+    const {itemId} = useParams()
 
     useEffect(() => {
       const getProducts = () => {
         return new Promise((res) => {
-          const findedProd = products.find(prod => prod.id === Number(hola));
+          const findedProd = products.find(prod => prod.id === Number(itemId));
           setTimeout(() => {
             res(findedProd)
-          },500)})
+          },1000)})
       }
         getProducts()
             .then(data => setProduct(data))
             .finally(() => setLoading(false))
-          }, [])
+          }, [itemId])
   
           if(loading) {
             return <Loader/>; 

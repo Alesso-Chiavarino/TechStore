@@ -18,7 +18,7 @@ const ItemListContainer = () => {
                 setLoading(true)
                 setTimeout(() => {
                     res(categoryName? filteredProds : products)
-                }, 500)
+                }, 1000)
             })} 
         getProducts()
             .then(res => setProducts(res))
@@ -31,7 +31,7 @@ const ItemListContainer = () => {
 
     return(
         <>
-            <h1 className='text-center mt-4 mb-5'>{categoryName}</h1>
+            <h1 className='text-center mt-4 mb-5'>{prods[0].categoryName}</h1>
             <div>
                 <ItemList products = {prods} />
             </div>

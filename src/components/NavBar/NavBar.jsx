@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Nav, Offcanvas, Form, Button } from 'react-bootstrap';
+import { Navbar, Container, Offcanvas, Form, } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget';
 import Brand from '../Brand/Brand';
 import MenuList from '../MenuList/MenuList';
@@ -7,12 +7,14 @@ import './NavBar.css'
 import Counter from '../Counter/Counter';
 import {FaSearch} from 'react-icons/fa'
 
-const NavBar = ({options}) => {
+const NavBar = ({categories}) => {
     return (
         <>
             <Navbar className='navBar' bg="dark" expand={false}>
                 <Container fluid>
-                    <Navbar.Brand href="#" className='text-white fw-bold fst-italic'><Brand img="../../img/icon.png" title="TechStore" /></Navbar.Brand>
+
+                    <Brand img="../../img/icon.png" title="TechStore"/>
+
                     <Form className="formSearch">
                         <Form.Control
                             type="search"
@@ -40,11 +42,11 @@ const NavBar = ({options}) => {
                     </Navbar.Offcanvas>
 
                 </Container>
-
             </Navbar>
+            
             <nav className='container-fluid navCategory' >
                 <ul className='d-flex justify-content-center m-0'>
-                    {options.map((op, i) => <MenuList key={i} section= {op.section} route = {op.route} />)}
+                    {categories.map((cat, i) => <MenuList key={i} section= {cat.section} route = {cat.route} />)}
                 </ul>
             </nav>
         </>

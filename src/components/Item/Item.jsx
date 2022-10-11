@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ( {nombre, precio, imagen, id} ) => {
     return (
-      <Link className='linkItemCard' to={`/item/${id}`}>
+      <Link onClick={() => window.scroll(0,0)} className='linkItemCard' to={`/item/${id}`}>
         <Card className='card'>
             <div className='contCardImg'>
                 <Card.Img className='cardImg' variant="top" src={imagen} />
@@ -21,7 +21,7 @@ const Item = ( {nombre, precio, imagen, id} ) => {
               <span className='d-block fw-bold' >{' $' + precio}</span>
               
             </Card.Text>
-            <Button variant="dark">Añadir al carrito</Button>
+            {/* <Button variant="dark">Añadir al carrito</Button> */}
           </Card.Body>
         </Card>
       </Link>

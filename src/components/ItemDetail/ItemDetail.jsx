@@ -2,6 +2,11 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 
 const ItemDetail = ({product}) => {
+
+    const onAdd = (value) => {
+        console.log(`Cantidad de items: ${value}`)
+    }
+
   return (
       <>
           <article className='cardDetail container bg-white p-3 rounded-2'>
@@ -33,7 +38,7 @@ const ItemDetail = ({product}) => {
                             </div>
                         </div>
                         <hr />
-                        <ItemCount initial={0} stock={20} />
+                        <ItemCount func={onAdd} initial={0} stock={20} />
                         <button className='btn btn-dark btnBuyID w-50 mx-5'>Comprar</button>
                     </div>
                 </div>

@@ -38,6 +38,9 @@
     color: #202020;
 }
 
+.btnIC:disabled {
+    opacity: 0.3;
+}
 
 
 /* font-family: "Montserrat Regular",sans-serif; */

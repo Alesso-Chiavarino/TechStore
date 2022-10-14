@@ -3,10 +3,28 @@ import Brand from '../Brand/Brand';
 import {NavLink} from 'react-router-dom'
 import './Footer.css'
 import {FaWhatsapp ,FaGithub, FaTwitter, FaInstagram} from 'react-icons/fa'
+import WhatsAppIcon from '../WhatsAppIcon/WhatsAppIcon'
 
-const Footer = ({links}) => {
+const Footer = () => {
+
+  const links = [{
+    section: "Inicio",
+    route: "/"
+  }, {
+    section: "Quienes Somos",
+    route: "/quienes-somos"
+  }, {
+    section: "Contacto",
+    route: "/contacto"
+  },
+  {
+    section: "Terminos y Condiciones",
+    route: "/terminos-condiciones"
+  }];
+
   return (
     <>
+    <WhatsAppIcon/>
       <div className="mt-5 container-fluid menu-container">
         <ul className="contMenuLink mb-0" >
           {/* en un futuro se creará un componente para estos links. */}

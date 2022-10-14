@@ -6,12 +6,50 @@ import MenuList from '../MenuList/MenuList';
 import './NavBar.css'
 import Counter from '../Counter/Counter';
 import {FaSearch} from 'react-icons/fa'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import { products } from '../../asyncMock'
 // import { useState, useRef } from 'react'
 // import Item from '../Item/Item';
 
-const NavBar = ({categories}) => {
+const NavBar = () => {
+
+    const categories = [{
+        section: "Placas de video",
+        route: "/category/placas-de-video"
+    },
+    {
+        section: "Procesadores",
+        route: "/category/procesadores"
+    },
+    {
+        section: "Placas madre",
+        route: "/category/placas-madre"
+    },
+    {
+        section: "Fuentes",
+        route: "/category/fuentes"
+    },
+    {
+        section: "Discos rigidos",
+        route: "/category/discos-rigidos"
+    },
+    {
+        section: "Discos solidos",
+        route: "/category/discos-solidos"
+    },
+    {
+        section: "Coolers",
+        route: "/category/coolers"
+    },
+    {
+        section: "Discos M2",
+        route: "/category/discos-m2"
+    },
+    {
+        section: "Memorias RAM",
+        route: "/category/memorias-ram"
+    },
+]
 
     // const [query, setQuery] = useState('')
     // const [prods, setProds] = useState([])
@@ -61,21 +99,7 @@ const NavBar = ({categories}) => {
                          {/* </Link> */}
                     </Form>
 
-                    <Navbar.Toggle className='shadow-none border-0' aria-controls="offcanvasNavbar" ><span style={{ color: "#fff" }}><CartWidget /> <Counter value={0} /> </span></Navbar.Toggle>
-                    <Navbar.Offcanvas
-                        className="bg-white"
-                        id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel"
-                        placement="end"
-                    >
-                        <Offcanvas.Header closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel">Carrito</Offcanvas.Title>
-                        </Offcanvas.Header>
-                        <hr className='w-75 m-auto' />
-                        <p className='mt-3 mx-3' >Agregá lo que quieras al carrito!</p>
-                        <Offcanvas.Body>
-                        </Offcanvas.Body>
-                    </Navbar.Offcanvas>
+                    <Link className='cart' to= "/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={0} /> </span> </Link>
 
                 </Container>
             </Navbar>

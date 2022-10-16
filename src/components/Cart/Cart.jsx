@@ -17,14 +17,14 @@ const Cart = () => {
       <span className='cartTitle' > <FontAwesomeIcon className='cartIconCart' icon={faCartShopping} /> <h3>Carrito de compras</h3> </span>
       <ul className="d-flex flex-wrap">
         {prods.map((prod) => 
-          <>
-            <li key={prod.id} className='contProdCart' >
+          <article className='w-100' key={prod.id}>
+            <li className='contProdCart' >
               <div className='contProdLeftCart' > <img className='imgProdCart' src={prod.imagen} alt={prod.nombre} /> </div>
               <div className='contProdCenterCart' > <h3>{prod.nombre}</h3> </div>
               <div className='contProdRightCart' > <span>${prod.precio}</span> </div>
             </li>
             <hr className='w-100 mb-4' />
-          </>
+          </article>
           )}
       </ul>
     </section>

@@ -19,6 +19,7 @@ const ItemDetail = ({product}) => {
                     <div className="rightSide">
                         <h2 className='productNameID' >{product.nombre}</h2>
                         <span className='precioID' >${product.precio}</span>
+                       
                         <hr />
                         <div className='payWith'>
                             <span className='messageID' >Medios de pago</span>
@@ -38,7 +39,8 @@ const ItemDetail = ({product}) => {
                             </div>
                         </div>
                         <hr />
-                        <ItemCount func={onAdd} initial={0} stock={20} />
+                        <span className='my-3 d-block fw-bold'>Stock disponible: {product.stock}</span>
+                        <ItemCount func={onAdd} initial={0} stock={product.stock} />
                         <button className='btn btn-dark btnBuyID w-50 mx-5'>Comprar</button>
                     </div>
                 </div>

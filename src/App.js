@@ -6,20 +6,25 @@ import Home from "./components/Home/Home";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
 import Cart from "./components/Cart/Cart";
+import SearchProvider from './context/SearchContext'
+import ProductsSearch from "./components/ProductsSearch/ProductsSearch";
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <NavBar />
-            <Routes>
-                <Route path= "/" element= { <Home/> } />
-                <Route path= "/cart" element= { <Cart/> } />
-                <Route path= "/item/:itemId" element= { <ItemDetailContainer/> } />
-                <Route path= "/category/:categoryName" element= { <ItemListContainer/> } />
-                <Route path= "*" element= { <Eror404/> } />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
+        <SearchProvider>
+            <BrowserRouter>
+                <NavBar />
+                <Routes>
+                    <Route path= "/" element= { <Home/> } />
+                    <Route path= "/cart" element= { <Cart/> } />
+                    <Route path= "/item/:itemId" element= { <ItemDetailContainer/> } />
+                    <Route path= "/category/:categoryName" element= { <ItemListContainer/> } />
+                    <Route path= "*" element= { <Eror404/> } />
+                    <Route path= "/search" element= { <ProductsSearch/> } />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
+        </SearchProvider>
     )
 }
 export default App;

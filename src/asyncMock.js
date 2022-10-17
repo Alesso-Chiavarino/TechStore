@@ -8,6 +8,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 10,
+        "descripcion": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora. Además, sus procesadores usan tecnología de punta para que puedas disfrutar de un producto veloz y duradero.",
     },
     {
         "id": 2,
@@ -18,6 +19,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 15,
+        "descripcion": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
     },
     {
         "id": 3,
@@ -28,6 +30,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 13,
+        "descripcion": "Placa madre AMD B450 AORUS con PWM digital híbrido, Dual NVMe PCIe Gen3 M.2, GIGABYTE Gaming LAN con protección ESD de 25KV, diseño anti-azufre, listo para CEC 2019, RGB FUSION 2.0.",
     },
     {
         "id": 4,
@@ -38,6 +41,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 13,
+        "descripcion": "Con la fuente de alimentación Asus ROG-STRIX-750G podrás asegurar la corriente continua y estable de tu computadora de escritorio y optimizar el funcionamiento de sus componentes.",
     },
     {
         "id": 5,
@@ -48,6 +52,7 @@ export const products = [
         "categoria": "memorias-ram",
         "categoryName": "Memorias Ram",
         "stock": 13,
+        "descripcion": "Velocidades de reloj rápidas de hasta 4133 MHzIntel XMP 2.0: overclocking más accesible, cumple con RoHS. Iluminación RGB fascinante: software compatible de los principales fabricantes de placas base, personalizable y programable.",
     },
     {
         "id": 6,
@@ -58,6 +63,7 @@ export const products = [
         "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos",
         "stock": 5,
+        "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual podés crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Blue WD20EZAZ se caracteriza por su eficiencia y buen funcionamiento, que sumado a su reducido consumo energético lo vuelven un disco indispensable para funciones estándar.",
     },
     {
         "id": 7,
@@ -68,6 +74,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 5,
+        "descripcion": "Considerado un dispositivo de alto rendimiento, la unidad en estado sólido A400 de Kingston está diseñada para las personas más exigentes. Mejora de forma notable la capacidad de respuesta de su sistema, ya que alcanza velocidades de lectura/escritura de hasta 500MB/seg y 450MB/seg. Por ende, es 10 veces más rápido que un disco duro tradicional. Al estar compuesta por una memoria flash es silenciosa y posee pocas probabilidades de tener fallas.",
     },
     {
         "id": 8,
@@ -78,6 +85,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 5,
+        "descripcion": "Fan Cooler Ventilador Gabinete Mineros Ring 12x12 Gamer Led RGBVentilador de chasis LED de alto brillo y apertura de doble cara de 12 cm. Equipado con tornillos de montaje, este ventilador utiliza 16 perlas de lámpara LED de alto brillo y larga duración.",
     },
     {
         "id": 9,
@@ -88,6 +96,7 @@ export const products = [
         "categoria": "discos-m2",
         "categoryName": "Discos M2",
         "stock": 5,
+        "descripcion": "Con la unidad en estado sólido XPG vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos.",
     },
     {
         "id": 10,
@@ -98,6 +107,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 8,
+        "descripcion": "Velocidad en cada lectura. Como cuenta con 1408 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa. Esto le permitirá ejecutar lecturas dispersas y rápidas de y hacia la GPU. Calidad de imagen, criterio fundamental a la hora de elegir una placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te harán ver hasta los detalles más ínfimos en cada ilustración.",
     },
     {
         "id": 11,
@@ -108,6 +118,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 8,
+        "descripcion": "Velocidad en cada lectura. Cuenta con 5888 núcleos, por lo que la interfaz de la placa será algo sorprendente. Este tipo de estructura es apropiado para el procesamiento de tecnologías más complejas y modernas caracterizadas por grandes volúmenes de datos.",
     },
     {
         "id": 12,
@@ -118,6 +129,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 7,
+        "descripcion": "Velocidad en cada lectura. Como cuenta con 1408 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa. Esto le permitirá ejecutar lecturas dispersas y rápidas de y hacia la GPU. Calidad de imagen, criterio fundamental a la hora de elegir una placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te harán ver hasta los detalles más ínfimos en cada ilustración.",
     },
     {
         "id": 13,
@@ -128,6 +140,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 7,
+        "descripcion": "Velocidad en cada lectura. Cuenta con 6144 núcleos, por lo que la interfaz de la placa será algo sorprendente. Este tipo de estructura es apropiado para el procesamiento de tecnologías más complejas y modernas caracterizadas por grandes volúmenes de datos.Calidad de imagen, criterio fundamental a la hora de elegir una placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te harán ver hasta los detalles más ínfimos en cada ilustración.",
     },
     {
         "id": 14,
@@ -138,6 +151,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 7,
+        "descripcion": "La GeForce RTX ™ 3090 es una gran GPU (BFGPU) feroz con un rendimiento de clase TITAN. Está impulsado por Ampere, la arquitectura RTX de segunda generación de NVIDIA, que duplica el rendimiento del trazado de rayos y la inteligencia artificial con núcleos RT mejorados, núcleos Tensor y nuevos multiprocesadores de transmisión. Además, cuenta con asombrosos 24 GB de memoria G6X, todo para brindar la mejor experiencia de juego.",
     },
     {
         "id": 15,
@@ -148,6 +162,7 @@ export const products = [
         "categoria": "placas-de-video",
         "categoryName": "Placas De Video",
         "stock": 7,
+        "descripcion": "Velocidad en cada lectura, cuenta con 5888 núcleos, por lo que la interfaz de la placa será algo sorprendente. Este tipo de estructura es apropiado para el procesamiento de tecnologías más complejas y modernas caracterizadas por grandes volúmenes de datos. Calidad de imagen, criterio fundamental a la hora de elegir una placa de video, su resolución de 7680x4320 no te defraudará. La decodificación de los píxeles en tu pantalla te harán ver hasta los detalles más ínfimos en cada ilustración.",
     },
     {
         "id": 16,
@@ -158,6 +173,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 9,
+        "descripcion": "Clave en el rendimiento de tu computadora de escritorio, ya no tenés que pensar en cómo distribuir el tiempo y acciones porque ahora las tareas en simultáneo son posibles. AMD cuenta con un catálogo de productos que se adaptan a los requerimientos de todo tipo de usuarios: juegos en línea, edición a gran escala, contenido en múltiples plataformas y más.",
     },
     {
         "id": 17,
@@ -168,6 +184,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 9,
+        "descripcion": "Núcleos: el corazón del procesador. En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto.",
     },
     {
         "id": 18,
@@ -178,6 +195,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 9,
+        "descripcion": "Máxima potencia. Al estar desbloqueado, podrás realizar overclocking y así aumentar la frecuencia de funcionamiento y optimizar el rendimiento de tu equipo. Personalizalo a tu gusto y disfrutá de tus videojuegos o hacé que la renderización de imágenes sea más ágil. ¡Descubrí el abanico de posibilidades que esta función te ofrece!",
     },
     {
         "id": 19,
@@ -188,6 +206,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 9,
+        "descripcion": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos. Núcleos: el corazón del procesador. En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto.",
     },
     {
         "id": 20,
@@ -198,6 +217,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 6,
+        "descripcion": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos. Núcleos: el corazón del procesador. En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto.",
     },
     {
         "id": 21,
@@ -208,6 +228,7 @@ export const products = [
         "categoria": "procesadores",
         "categoryName": "Procesadores",
         "stock": 4,
+        "descripcion": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones, de la transferencia de datos y la conexión con otros elementos tecnológicos. Núcleos: el corazón del procesador. En este producto, encontrarás los núcleos, que son los encargados de ejecutar las instrucciones y actividades que le asignás a tu dispositivo. Estos tienen relación directa con dos elementos: los hilos y el modelo. Por lo tanto, a la hora de elegir un procesador, es importante que valores los tres en su conjunto.",
     },
     {
         "id": 22,
@@ -218,6 +239,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 7,
+        "descripcion": "Las tarjetas madre ASUS Prime B450M II Series brindan la base sólida necesaria para tu primera construcciónademás de flexibilidad para crecer con tus ambiciones. Hemos combinado todas las cosas buenas de los procesadoresAMD Ryzen™ con el diseño e ingeniería esenciales de ASUS ,para que te beneficies de las tecnologías líderes en la industria,que incluyen el ajuste automático del sistema, controles deenfriamiento completos y audio integrado envolvente. Cuando construyes con una tarjeta madre ASUS Prime B450M II Series, construyes de manera inteligente, fácil y asequible.",
     },
     {
         "id": 23,
@@ -228,6 +250,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 8,
+        "descripcion": "ASUS Prime es la siguiente evolución de la tarjeta madre ASUS, nacida con un pedigree que data de 1989. Nuestro equipo de ingenieros de clase mundial son apasionados en darle el poder a todo el mundo de disfrutar de los beneficios de la personalización y los ajustes, y la fuerza motriz detrás del desarrollo de Prime es el hacer los controles avanzados fácilmente accesibles - maximizando rendimiento, estabilidad y compatibilidad para tener las mejores experiencias de armado de PC DIY. En resumen: es hora de Prime.",
     },
     {
         "id": 24,
@@ -238,6 +261,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 3,
+        "descripcion": "La serie PRO ayuda a los usuarios a trabajar de manera más inteligente al brindar una experiencia eficiente y productiva. Con una funcionalidad estable y un ensamblaje de alta calidad, las placas base de la serie PRO brindan no solo flujos de trabajo profesionales optimizados, sino también menos resolución de problemas y longevidad.",
     },
     {
         "id": 25,
@@ -248,6 +272,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 5,
+        "descripcion": "DISEÑO FÁCIL PARA EL USUARIO. Las placas base MSI cuentan con toneladas de diseño conveniente e inteligente para los usuarios de bricolaje, innumerables herramientas de ajuste y solución de problemas del sistema están a sus disposición para llevar sus sistema a nuevas alturas y satisfacer incluso al ajustador más exigente. Hace que sea muy fácil instalar su propia placa base sin ningún problema.",
     },
     {
         "id": 26,
@@ -258,6 +283,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 6,
+        "descripcion": "TOTALMENTE CONTROLABLE EN BIOS Y SOFTWARE. Las placas base MSI le permiten administrar velocidades y temperaturas para todos los ventiladores de su sistema y CPU. Total Fan Control le permite verificar las características de su sistema principal en una interfaz gráfica simplificada. También puede configurar hasta 4 objetivos de temperatura para la CPU y la placa base, que ajustarán las velocidades del ventilador automáticamente.",
     },
     {
         "id": 27,
@@ -268,6 +294,7 @@ export const products = [
         "categoria": "placas-madre",
         "categoryName": "Placas Madre",
         "stock": 10,
+        "descripcion": "CONECTIVIDAD. Lo más importante del bricolaje es la capacidad de expansión. Las placas base de la serie MSI PRO ofrecen muchas posibilidades para las necesidades de los prosumidores. LAN estable, almacenamiento más rápido y velocidad de transferencia USB y otros conectores expandibles están listos para aumentar su flexibilidad.",
     },
     {
         "id": 28,
@@ -278,6 +305,7 @@ export const products = [
         "categoria": "memorias-ram",
         "categoryName": "Memorias Ram",
         "stock": 7,
+        "descripcion": "Con diseños únicos y modernos, Corsair es una de las marcas más elegidas por los usuarios al momento de comprar una memoria ram. Cargar programas más rápido, aumentar la capacidad de responder y ejecutar aplicaciones de uso intensivo son algunas de las características y ventajas que tendrás al momento de adquirir esta memoria. No esperes más para mejorar el rendimiento de tu computadora.",
     },
     {
         "id": 29,
@@ -288,6 +316,7 @@ export const products = [
         "categoria": "memorias-ram",
         "categoryName": "Memorias Ram",
         "stock": 8,
+        "descripcion": "Si tu computadora funciona con lentitud, si un programa no responde o no se carga, lo más probable es que se trate de un problema de memoria. Estos son posibles indicios de un rendimiento defectuoso en el día a día de tus tareas. Por ello, contar con una memoria Kingston -sinónimo de trayectoria y excelencia- mejorará la productividad de tu equipo: las páginas se cargarán más rápido y la ejecución de nuevas aplicaciones resultará más ágil y simple.",
     },
     {
         "id": 30,
@@ -298,6 +327,7 @@ export const products = [
         "categoria": "memorias-ram",
         "categoryName": "Memorias Ram",
         "stock": 6,
+        "descripcion": "Una actualización de memoria es una de las formas más rápidas, fáciles y económicas de mejorar de manera inmediata el rendimiento de tu computadora. Ya sea para un ordenador portátil, de escritorio o una estación de trabajo que funciona lento y relentiza tus actividades, instalar más memoria tomará solo unos minutos y te brindará soluciones inmediatas y duraderas a corto, mediano y largo plazo. Acelerá y extendé la vida útil del sistema y aprovechá la capacidad de respuesta que te da para trabajar de manera simple y confortable. No lo dudes más, la memoria Crucial es una de las formas más accesibles para aumentar de manera fácil la capacidad multitarea de tu computadora.",
     },
     {
         "id": 31,
@@ -308,6 +338,7 @@ export const products = [
         "categoria": "memorias-ram",
         "categoryName": "Memorias Ram",
         "stock": 5,
+        "descripcion": "Potenciá tu PC! Con su tecnología DDR4, mejorará el desempeño de tu equipo, ya que opera en 3 y 4 canales, generando mayor fluidez y velocidad en la transferencia de datos. ¡Optimizá al máximo el rendimiento de tu ordenador!",
     },
     {
         "id": 32,
@@ -318,6 +349,7 @@ export const products = [
         "categoria": "memorias-ram",
         "categoryName": "Memorias Ram",
         "stock": 2,
+        "descripcion": "Trident Z Royal Silver Edition - with RGB // 3200MHz memory speed, PC4-25600, CL16 // Two matched 8GB DDR4 modules, 288 pins, Voltage 1.35V // Polished aluminum heatspreaders in silver color, crystal effect light bar // Ideal for overclocking, and backed by a lifetime warranty // 16GB DDR4 kit, 2x 8GB modules. Features G.Skills Trident Z Royal Series Silver heatsinks, memory speed of 3200MHz and timings of CL16 (16-18-18-38). Meticulously crafted to display just the right amount of light refraction, the crystalline light bar scatters the RGB colors in a magnificent display of LED lighting.",
     },
     {
         "id": 33,
@@ -328,6 +360,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 3,
+        "descripcion": "Con la fuente de alimentación Giga-Byte Technology GP-P1000GM podrás asegurar la corriente continua y estable de tu computadora de escritorio y optimizar el funcionamiento de sus componentes. Eficiencia garantizada, además, con su potencia de 1000 W tendrás la energía suficiente para jugar y mirar tus series y videos favoritos por horas con un alto rendimiento.",
     },
     {
         "id": 34,
@@ -338,6 +371,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 5,
+        "descripcion": "Con la fuente de alimentación Thermaltake Technology SPR-700AH2NK-1 podrás asegurar la corriente continua y estable de tu computadora de escritorio y optimizar el funcionamiento de sus componentes. Con control de temperatura, a través de su sistema de refrigeración, podrás mantener la temperatura ideal de sus componentes y evitar su sobrecalentamiento.",
     },
     {
         "id": 35,
@@ -348,6 +382,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 5,
+        "descripcion": "Las fuentes de alimentación CORSAIR RMx White Series ofrecen un control del voltaje extremadamente preciso, un funcionamiento silencioso, una eficiencia con certificación 80 PLUS® Gold, una novedosa carcasa blanca y un cableado totalmente modular. Fabricadas con condensadores totalmente japoneses a 105 °C, constituyen una gran elección para los PC de alto rendimiento en los que la fiabilidad es esencial. El nivel de eficiencia 80 PLUS® Gold reduce el coste de funcionamiento y el exceso de calor, y el modo de ventilador sin revoluciones garantiza un funcionamiento prácticamente silencioso a cargas bajas y medias. Con un nuevo exterior blanco y despejado y cables con fundas individuales totalmente modulares, ahora es más sencillo que nunca personalizar el estilo de su sistema y usar solo los cables que necesita con resultados organizados e impresionantes.",
     },
     {
         "id": 36,
@@ -358,6 +393,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 6,
+        "descripcion": "Con la fuente de alimentación Aerocool Advanced Technologies 600W Full Range podrás asegurar la corriente continua y estable de tu computadora de escritorio y optimizar el funcionamiento de sus componentes. Con control de temperatura, a través de su sistema de refrigeración, podrás mantener la temperatura ideal de sus componentes y evitar su sobrecalentamiento.",
     },
     {
         "id": 37,
@@ -368,6 +404,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 7,
+        "descripcion": "Con la fuente de alimentación Asus ROG-THOR-850P podrás asegurar la corriente continua y estable de tu computadora de escritorio y optimizar el funcionamiento de sus componentes. Eficiencia garantizada, además, con su potencia de 850 W tendrás la energía suficiente para jugar y mirar tus series y videos favoritos por horas con un alto rendimiento.",
     },
     {
         "id": 38,
@@ -378,6 +415,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 8,
+        "descripcion": "ROG Thor 850W Platinum, fuente de poder con Aura Sync y una pantalla OLEDAura Sync: Personalización avanzada con LEDs RGB direccionables y compatibilidad con Aura SyncPantalla OLED: Monitorea el consumo de energía en tiempo real con pantalla OLED Power DisplaSolución ROG Thermal: Enfriamiento sin ruido (0db) con protección IP5X a prueba de polvo, ventilador wing-blade y diseño del disipador de calor estilo RO80 PLUS Platinum: Construida con condensadores 100% japoneses y otros componentes premium. Cables con Cubierta: Para un fácil manejo y estética en tu armado",
     },
     {
         "id": 39,
@@ -388,6 +426,7 @@ export const products = [
         "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos",
         "stock": 9,
+        "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual podés crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Blue WD10EZEX se caracteriza por su eficiencia y buen funcionamiento, que sumado a su reducido consumo energético lo vuelven un disco indispensable para funciones estándar.",
     },
     {
         "id": 40,
@@ -398,6 +437,7 @@ export const products = [
         "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos",
         "stock": 10,
+        "descripcion": "Seagate, referente en el mercado de unidades de almacenamiento se encarga de brindar los mejores productos a sus clientes. Su control de calidad más su compromiso con una producción sustentable y responsable con el medio ambiente la vuelven una líder indiscutible. Sus dispositivos resaltan todas estas características que generan un óptimo rendimiento con el objetivo de darte una gran experiencia de uso. El Barracuda ST1000LM048 se caracteriza por su eficiencia y buen funcionamiento, que sumado a su reducido consumo energético lo vuelven un disco indispensable para funciones estándar.",
     },
     {
         "id": 41,
@@ -408,6 +448,7 @@ export const products = [
         "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos",
         "stock": 20,
+        "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual podés crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Blue WD20EZEX se caracteriza por su eficiencia y buen funcionamiento, que sumado a su reducido consumo energético lo vuelven un disco indispensable para funciones estándar.",
     },
     {
         "id": 42,
@@ -418,6 +459,7 @@ export const products = [
         "categoria": "discos-rigidos",
         "categoryName": "Discos Rigidos",
         "stock": 25,
+        "descripcion": "Más velocidad a tu alcance. Este producto posee una interfaz SATA, Es de gran importancia y con su velocidad de envío de información mejora el rendimiento. Vas a poder cargar todo tipo de archivos.",
     },
     {
         "id": 43,
@@ -428,6 +470,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 13,
+        "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual podés crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Green WDS240G2G0A está adaptado para que puedas acceder de forma rápida a tus documentos digitales gracias a su tecnología en estado sólido.",
     },
     {
         "id": 44,
@@ -438,6 +481,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 15,
+        "descripcion": "Con la unidad en estado sólido Patriot vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Más velocidad a tu alcance. Este producto posee una interfaz SATA III que se encarga de transferir datos con la placa madre de tu computadora. Es de gran importancia y con su velocidad de envío de información mejora el rendimiento. Vas a poder cargar todo tipo de archivos en tu PC con rapidez.",
     },
     {
         "id": 45,
@@ -448,6 +492,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 54,
+        "descripcion": "Considerado un dispositivo de alto rendimiento, la unidad en estado sólido A400 de Kingston está diseñada para las personas más exigentes. Mejora de forma notable la capacidad de respuesta de su sistema, ya que alcanza velocidades de lectura/escritura de hasta 500MB/seg y 450MB/seg. Por ende, es 10 veces más rápido que un disco duro tradicional. Al estar compuesta por una memoria flash es silenciosa y posee pocas probabilidades de tener fallas.",
     },
     {
         "id": 46,
@@ -458,6 +503,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 35,
+        "descripcion": "Con la unidad en estado sólido Hikvision vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Más velocidad a tu alcance. Este producto posee una interfaz SATA III que se encarga de transferir datos con la placa madre de tu computadora. Es de gran importancia y con su velocidad de envío de información mejora el rendimiento. Vas a poder cargar todo tipo de archivos en tu PC con rapidez.",
     },
     {
         "id": 47,
@@ -468,6 +514,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 38,
+        "descripcion": "Con la unidad en estado sólido HP vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Más velocidad a tu alcance, este producto posee una interfaz SATA III que se encarga de transferir datos con la placa madre de tu computadora. Es de gran importancia y con su velocidad de envío de información mejora el rendimiento. Vas a poder cargar todo tipo de archivos en tu PC con rapidez.",
     },
     {
         "id": 48,
@@ -478,6 +525,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 42,
+        "descripcion": "Unidad de estado solido m.2 nvme pcie gen4 x4; compatible con la ultima plataforma amd x570excelente rendimiento: la velocidad de lectura es de hasta 5.000 mb/smejora la velocidad y el rendimiento del sistema en generaltres elementos de disipacion de calor - la combinacion de grafeno y cobre puede proporcionar una excelente disipacion de calor. El modulo de refrigeracion ultrafino y patentado de 0,2 mm puede evitar interferencias durante la instalacionproteccion multiple, tecnologia de gestion inteligente: supervisa eficazmente el estado de la unidad de estado solido y maximiza su rendimiento.",
     },
     {
         "id": 49,
@@ -488,6 +536,7 @@ export const products = [
         "categoria": "discos-m2",
         "categoryName": "Discos M2",
         "stock": 18,
+        "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual podés crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Green WDS240G2G0A está adaptado para que puedas acceder de forma rápida a tus documentos digitales gracias a su tecnología en estado sólido.",
     },
     {
         "id": 50,
@@ -498,6 +547,7 @@ export const products = [
         "categoria": "discos-m2",
         "categoryName": "Discos M2",
         "stock": 7,
+        "descripcion": "Western Digital es una marca de renombre mundial en almacenamiento de datos con la cual podés crear, experimentar y guardar contenidos a través de una amplia gama de dispositivos. La alta seguridad y rendimiento que brindan sus unidades la convierten en una de las empresas más elegidas del mercado. El WD Green WDS120G2G0B está adaptado para que puedas acceder de forma rápida a tus documentos digitales gracias a su tecnología en estado sólido.",
     },
     {
         "id": 51,
@@ -508,6 +558,7 @@ export const products = [
         "categoria": "discos-m2",
         "categoryName": "Discos M2",
         "stock": 56,
+        "descripcion": "Con la unidad en estado sólido XPG vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Más velocidad a tu alcance. Este disco transfiere datos a través de sus interfaces PCIe 3.0 y NVMe 1.3, lo que te permite transmitir una mayor cantidad de información de una sola vez.",
     },
     {
         "id": 52,
@@ -518,6 +569,7 @@ export const products = [
         "categoria": "discos-m2",
         "categoryName": "Discos M2",
         "stock": 24,
+        "descripcion": "Con la unidad en estado sólido Gigabyte vas a incrementar la capacidad de respuesta de tu equipo. Gracias a esta tecnología podrás invertir en velocidad y eficiencia para el inicio, la carga y la transferencia de datos. Más velocidad a tu alcance. Este disco transfiere datos a través de una interfaz PCIe 3.0, lo que te brindará trasmitir una mayor cantidad de información de una sola vez.",
     },
     {
         "id": 53,
@@ -528,6 +580,7 @@ export const products = [
         "categoria": "discos-m2",
         "categoryName": "Discos M2",
         "stock": 26,
+        "descripcion": "Patriot Viper Gaming se complace en presentar la primera sincronización de aplicaciones RGB del mundo, SSD M.2 PCIe Gen3 x4 de alto rendimiento, VPR100. Diseñado con un resistente protector térmico externo y el sólido controlador E12 de Phison, le da al VPR100 la tecnología de vanguardia para alcanzar la velocidad del rayo. 5 veces más rápido que los SSD SATA, VPR100 es la próxima edición de SSD RGB para jugadores, entusiastas de la tecnología, creadores de contenido, modeladores 3D y profesionales de renderizado de video que buscan tiempos de inicio increíblemente rápidos y acceso instantáneo a sus datos para una mejor productividad. Mejore su juego y clasifique sus partidos competitivos con un estilo sorprendente con el SSD PCIe impresionantemente confiable, de bajo perfil y fácil de instalar del VPR100.",
     },
     {
         "id": 54,
@@ -538,6 +591,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 52,
+        "descripcion": "La solución de refrigeración para PC, posibilitando una mejor circulación de aire que potencia el rendimiento de su equipo, voltaje: 12V, tamaño del Cooler: 4 pulgadas (12 cm.)",
     },
     {
         "id": 55,
@@ -548,6 +602,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 62,
+        "descripcion": "Ventilador de 120mm negro con rodamiento Fluid Dinamic Bearing superior al rodamiento a ruleman!!! por su bajo nivel de ruido hasta en prolongados periodos de uso, no decae el rendimiento en el tiempo como ocurre con el rulemán y sobretodo mayor durabilidad.",
     },
     {
         "id": 56,
@@ -558,6 +613,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 28,
+        "descripcion": "Cooler para Gabinete ATX. Tamaño 120x120x25mmVelocidad de Fan 1200rpmSUPER SILENCIOSO RGBA. Alimentación: Molex 4 Pines para Fuente / 3 Pins Motherboard Air Flow: 46CFM±10%Nivel de Ruido 23.4dBA",
     },
     {
         "id": 57,
@@ -568,6 +624,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 64,
+        "descripcion": "MasterFan MF120 Halo, una nueva serie de la familia MasterFan, proporciona una solución deenfriamiento de aire específica ideal para enfriadores de CPU y ventiladores de entrada dechasis. Con doble iluminación RGB direccionable de bucle que garantiza la visualización másvibrante de color para su cobertura y genera un flujo de aire de alta presión. MF120 Haloestá equipado con múltiples capas de nuestras tecnologías exclusivas de reducción de ruidoy una combinación perfecta de diseño de aspas de ventilador que combinan el trabajo en armonía para enfriar toda su carcasa y sus componentes en silencio.",
     },
     {
         "id": 58,
@@ -578,5 +635,6 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 34,
+        "descripcion": "Complete su sistema de refrigeracion Corsair LL rgb con un ventilador adicional Con 16 LEDs RGB direccionables individualmente divididos entre dos bucles de luz separados Flujo de aire - 63 CFM Nivel de ruido - 36 0 decibelios // La llamativa carcasa blanca del ventilador refleja la luz para una iluminacion mas brillante y coincide con el aspecto limpio y refinado de otros productos blancos de Corsair // Cree deslumbrantes patrones y efectos de iluminacion con el potente software Corsair iCUE dando vida a su sistema con una iluminacion RGB dinamica sincronizada en todos sus productos compatibles con iCUE.Tipo de rodamiento: Hidraulico // El control del ventilador Pwm permite un ajuste dinamico de la velocidad entre 360 RPM y 2 200 RPM minimizando el ruido o maximizando el flujo de aire.Consumo de energia: 0,30 A // Aspa del ventilador de 120mm diseñada para un alto flujo de aire y presion estatica //",
     }
 ]

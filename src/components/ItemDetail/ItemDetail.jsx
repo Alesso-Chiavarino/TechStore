@@ -1,10 +1,15 @@
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
+import { CartContext } from '../../context/CartContext';
+import { useContext } from 'react';
 
 const ItemDetail = ({product}) => {
 
+    const {addToCart} = useContext(CartContext);
+
     const onAdd = (value) => {
-        console.log(`Cantidad de items: ${value}`)
+        addToCart(value, product)
+        // console.log(`Cantidad de items: ${value}`)
     }
 
   return (
@@ -47,7 +52,7 @@ const ItemDetail = ({product}) => {
                 <hr />
                 <div className="bottomSide">
                     <h5>Descrición</h5>
-                    <span className='descriptID'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam veritatis iusto aut dignissimos deserunt voluptates obcaecati dolorum fugit temporibus accusamus iure velit, id a mollitia voluptatem. Vitae doloremque rem inventore.</span>
+                    <span className='descriptID'>{product.descripcion}</span>
                 </div>
           </article>
       </>

@@ -1,16 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Form, } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget';
 import Brand from '../Brand/Brand';
 import MenuList from '../MenuList/MenuList';
 import './NavBar.css'
 import Counter from '../Counter/Counter';
-import {FaSearch} from 'react-icons/fa'
-import { Link } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa'
+import { Link, useNavigate } from 'react-router-dom';
 import { products } from '../../asyncMock'
 import { useState, useRef } from 'react'
 import { useContext } from 'react'
 import { SearchContext } from '../../context/SearchContext'
+import { CartContext } from '../../context/CartContext';
 
 const NavBar = () => {
 
@@ -50,10 +51,10 @@ const NavBar = () => {
         section: "Memorias RAM",
         route: "/category/memorias-ram"
     },
-]
+    ]
 
     //traigo contexto
-    const {searchProducts, writeText} = useContext(SearchContext)
+    const { searchProducts, writeText } = useContext(SearchContext)
 
     const [query, setQuery] = useState('')
     const inputRef = useRef(null)
@@ -62,24 +63,38 @@ const NavBar = () => {
     const getProducts = () => {
 
         const notFound = products.filter(prod => prod.nombre.toLowerCase().includes('awdawdawawfaegeg'))
-        const filteredProds = products.filter(prod => prod.nombre.toLowerCase().includes(query) || prod.categoria.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query) )
+        const filteredProds = products.filter(prod => prod.nombre.toLowerCase().includes(query) || prod.categoria.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query))
         return new Promise((res) => {
-          setTimeout(() => {
-            res(query === '' ? notFound : filteredProds)
-          }, 0)
+            setTimeout(() => {
+                res(query === '' ? notFound : filteredProds)
+            }, 0)
         })
-      }
-    
-      const traer = () => {
+    }
+
+    const getSearch = () => {
         getProducts()
             //guardo lo buscadó en mi contexto
-          .then(res => searchProducts(res));
-          writeText(inputRef.current.value)
-          inputRef.current.value = ''
-      }
+            .then(res => searchProducts(res));
+        writeText(inputRef.current.value)
+        inputRef.current.value = ''
+    }
+
+    const navigate = useNavigate()
+    const getSearchEnter = (e) => {
+        //si presiono enter...
+        if (e.keyCode === 13) {
+            getProducts()
+                .then(res => searchProducts(res));
+            writeText(inputRef.current.value)
+            inputRef.current.value = ''
+            navigate('/search')
+        }
+    }
 
     //   console.log(search.length)
-      
+    // para contador de carrito dinamico
+    const {cart} = useContext(CartContext)
+
 
 
     return (
@@ -87,35 +102,31 @@ const NavBar = () => {
             <Navbar className='navBar' expand={false}>
                 <Container fluid>
 
-                    <Brand img="../../img/icon.png" title="TechStore"/>
+                    <Brand img="../../img/icon.png" title="TechStore" />
 
-                    <Form className="formSearch">
-                        <Form.Control
+                    <div className='d-flex align-items-center'>
+                        <input
                             ref={inputRef}
+                            onKeyUp={getSearchEnter}
                             onChange={(e) => setQuery(e.target.value)}
-                            type="search"
                             placeholder="Buscá lo que desees!"
-                            className="me-2 navSearch"
+                            className="me-2 navSearch form-control"
                             aria-label="Search"
                         />
-                        <Link to={'/search'} > 
-                        <FaSearch className='searchIcon' onClick={traer} />
-                        {/* <FaSearch className='searchIcon'/> */}
-                         </Link>
-                    </Form>
-
-                    <Link className='cart' to= "/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={0} /> </span> </Link>
+                        <Link to={'/search'} >
+                            <FaSearch className='searchIcon' onClick={getSearch} />
+                        </Link>
+                    </div>
+                    <Link className='cart' to="/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={cart.length} /> </span> </Link>
 
                 </Container>
             </Navbar>
-            
+
             <nav className='container-fluid navCategory' >
                 <ul className='d-flex justify-content-center m-0'>
-                    {categories.map((cat, i) => <MenuList key={i} section= {cat.section} route = {cat.route} />)}
+                    {categories.map((cat, i) => <MenuList key={i} section={cat.section} route={cat.route} />)}
                 </ul>
             </nav>
-            
-            {/* PARTE SEARCH */}
         </>
     );
 }

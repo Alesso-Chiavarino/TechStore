@@ -90,11 +90,19 @@ const NavBar = () => {
             navigate('/search')
         }
     }
-
+    
     //   console.log(search.length)
     // para contador de carrito dinamico
     const {cart} = useContext(CartContext)
-
+   
+    //contador de items en el cart
+    const cartItemCounter = () => {
+        let cartMap = cart.map(prod => prod.cantidad)
+        let itemCountCart = cartMap.reduce((a, b) => a + b, 0)
+        return itemCountCart;
+    }
+    const itemCountCart = cartItemCounter()
+    
 
 
     return (
@@ -117,7 +125,7 @@ const NavBar = () => {
                             <FaSearch className='searchIcon' onClick={getSearch} />
                         </Link>
                     </div>
-                    <Link className='cart' to="/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={cart.length} /> </span> </Link>
+                    <Link className='cart' to="/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={itemCountCart} /> </span> </Link>
 
                 </Container>
             </Navbar>

@@ -2,15 +2,31 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const ItemDetail = ({product}) => {
 
     const {addToCart} = useContext(CartContext);
+    const notify = (quantity) => toast(`Se agregó ${quantity} ${product.nombre} al carrito!`, {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
 
     const onAdd = (value) => {
         addToCart(value, product)
+        notify(value)
         // console.log(`Cantidad de items: ${value}`)
     }
+
+    const navigate = useNavigate();
 
   return (
       <>
@@ -55,6 +71,7 @@ const ItemDetail = ({product}) => {
                     <span className='descriptID'>{product.descripcion}</span>
                 </div>
           </article>
+          <ToastContainer onClick={() => navigate('/cart')} style={{"zIndex": 4545545}} />
       </>
   )
 }

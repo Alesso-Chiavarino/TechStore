@@ -1,7 +1,3 @@
-/* * { */
-    /* border: 2px solid red; */
-/* } */
-
 .containerEror {
     width: 100%;
     height: 70vh;
@@ -25,13 +21,10 @@
 }
 
 .erorDesc {
-    /* margin-top: 20px; */
     font-size: 20px;
 }
 
-
 .imgEror {
-    /* object-fit: contain; */
     width: 500px;
     height: 500px;
 }

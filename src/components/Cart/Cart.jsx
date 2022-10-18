@@ -4,10 +4,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from '../../context/CartContext';
 import CartItemCount from '../CartItemCount/CartItemCount';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
   const {cart, deleteToCart, deleteAllToCart} = useContext(CartContext)
+
+  const navigate = useNavigate();
+
+  if (cart.length === 0) {
+    return (
+      <div className='contCartEmpty container' >
+        <div className=''>
+          <h2 className='cartMessage'>El carrito esta vacio!</h2>
+          <h2 className='cartMessage2'>Puedes agregar productos desde el botón añadir al carrito en el catálogo.</h2>
+          <button className='btn btn-dark' onClick={() => navigate('/')} >Ir al Catalogo</button>
+        </div>
+        <img className='imgErorCart' src="./img/emptyCart.svg" alt="notFoundIcon"/>
+      </div>
+    )
+  }
 
   return (
     <section className='cartContainer container my-0 d-flex flex-column'>

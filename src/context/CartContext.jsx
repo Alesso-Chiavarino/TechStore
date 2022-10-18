@@ -41,9 +41,15 @@ const CartProvider = ({ children }) => {
         })
         setCart(uptdatedCart)
     }
+
+    const cartItemCounter = () => {
+        let acc = 0;
+        cart.map(prod => acc += prod.cantidad)
+        return acc;
+    }
     
     return (
-        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart}}>
+        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter}}>
             {children}
         </CartContext.Provider>
     )

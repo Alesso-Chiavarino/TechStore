@@ -13,3 +13,7 @@
     font-size: 15px;
     font-weight: 700;
 }
+
+.counterHide {
+    visibility: hidden;
+}

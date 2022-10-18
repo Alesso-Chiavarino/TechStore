@@ -60,3 +60,26 @@
 .btnElimarCart:hover {
     color:rgb(29, 29, 29)
 }
+
+.contCartEmpty {
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 600px;
+}
+
+.cartMessage {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.cartMessage2 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.imgErorCart {
+    width: 500px;
+    height: 500px;
+}

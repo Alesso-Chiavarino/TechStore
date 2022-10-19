@@ -6,12 +6,14 @@ import MenuList from '../MenuList/MenuList';
 import './NavBar.css'
 import Counter from '../Counter/Counter';
 import { FaSearch } from 'react-icons/fa'
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom';
 import { products } from '../../asyncMock'
 import { useState, useRef } from 'react'
 import { useContext } from 'react'
 import { SearchContext } from '../../context/SearchContext'
 import { CartContext } from '../../context/CartContext';
+import DropdownMenuList from '../DropdownMenuList/DropdownMenuList';
 
 const NavBar = () => {
 
@@ -35,22 +37,26 @@ const NavBar = () => {
         section: "Discos rigidos",
         route: "/category/discos-rigidos"
     },
-    {
-        section: "Discos solidos",
-        route: "/category/discos-solidos"
-    },
-    {
-        section: "Coolers",
-        route: "/category/coolers"
-    },
-    {
-        section: "Discos M2",
-        route: "/category/discos-m2"
-    },
-    {
-        section: "Memorias RAM",
-        route: "/category/memorias-ram"
-    },
+    // {
+    //     section: "Discos solidos",
+    //     route: "/category/discos-solidos"
+    // },
+    // {
+    //     section: "Coolers",
+    //     route: "/category/coolers"
+    // },
+    // {
+    //     section: "Discos M2",
+    //     route: "/category/discos-m2"
+    // },
+    // {
+    //     section: "Memorias RAM",
+    //     route: "/category/memorias-ram"
+    // },
+    // {
+    //     section: "Perifericos",
+    //     route: "/category/memorias-ram"
+    // },
     ]
 
     //traigo contexto
@@ -63,7 +69,7 @@ const NavBar = () => {
     const getProducts = () => {
 
         const notFound = products.filter(prod => prod.nombre.toLowerCase().includes('awdawdawawfaegeg'))
-        const filteredProds = products.filter(prod => prod.nombre.toLowerCase().includes(query) || prod.categoria.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query))
+        const filteredProds = products.filter(prod => prod.nombre.toLowerCase().includes(query) || prod.categoria.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query) || prod.descripcion.toLowerCase().includes(query))
         return new Promise((res) => {
             setTimeout(() => {
                 res(query === '' ? notFound : filteredProds)
@@ -95,6 +101,11 @@ const NavBar = () => {
     // para contador de carrito dinamico
     const {cartItemCounter} = useContext(CartContext)
 
+    //dropdown
+    const [dropdown, setDropdown] = useState(false)
+
+    
+
     return (
         <>
             <Navbar className='navBar' expand={false}>
@@ -121,10 +132,17 @@ const NavBar = () => {
             </Navbar>
 
             <nav className='container-fluid navCategory' >
+                <div className='d-flex gap-1 align-items-center contSpanCategories' onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}  > <span className='spanCategories'>Categorias</span> {dropdown ? <FaChevronDown className='arrow' /> : <FaChevronUp className='arrow' />} </div>
                 <ul className='d-flex justify-content-center m-0'>
                     {categories.map((cat, i) => <MenuList key={i} section={cat.section} route={cat.route} />)}
                 </ul>
             </nav>
+            {dropdown &&
+                <div onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}  className="contCategoriesList" >
+                    <ul className='contDropdownCategories'>
+                        <DropdownMenuList />
+                    </ul>
+                </div>}
         </>
     );
 }

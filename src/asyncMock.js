@@ -525,7 +525,7 @@ export const products = [
         "categoria": "discos-solidos",
         "categoryName": "Discos Solidos",
         "stock": 42,
-        "descripcion": "Unidad de estado solido m.2 nvme pcie gen4 x4; compatible con la ultima plataforma amd x570excelente rendimiento: la velocidad de lectura es de hasta 5.000 mb/smejora la velocidad y el rendimiento del sistema en generaltres elementos de disipacion de calor - la combinacion de grafeno y cobre puede proporcionar una excelente disipacion de calor. El modulo de refrigeracion ultrafino y patentado de 0,2 mm puede evitar interferencias durante la instalacionproteccion multiple, tecnologia de gestion inteligente: supervisa eficazmente el estado de la unidad de estado solido y maximiza su rendimiento.",
+        "descripcion": "Unidad de estado solido m.2 nvme pcie gen4 x4; compatible con la ultima plataforma amd x570excelente rendimiento: la velocidad de lectura es de hasta 5.000 mb/s, mejora la velocidad y el rendimiento del sistema en generaltres elementos de disipacion de calor - la combinacion de grafeno y cobre puede proporcionar una excelente disipacion de calor. El modulo de refrigeracion ultrafino y patentado de 0,2 mm puede evitar interferencias durante la instalacionproteccion multiple, tecnologia de gestion inteligente: supervisa eficazmente el estado de la unidad de estado solido y maximiza su rendimiento.",
     },
     {
         "id": 49,

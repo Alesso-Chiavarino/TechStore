@@ -7,9 +7,9 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
 
     const addToCart = (amount, item) => {
-        const product = {cantidad: amount, ...item}
+        const product = { cantidad: amount, ...item }
 
-        if(isInCart(product.id)) {
+        if (isInCart(product.id)) {
             addAmount(product)
             // console.log('ese producto ya esta')
         } else {
@@ -47,9 +47,43 @@ const CartProvider = ({ children }) => {
         cart.map(prod => acc += prod.cantidad)
         return acc;
     }
+
+    const totalPrice = () => {
+        let acc = 0;
+        cart.map(prod => acc += prod.cantidad * prod.precio)
+        return acc;
+    }
+
+    const subtractQuantity = (id) => {
+        const updatedCart = cart.map(prod => {
+            if ((prod.id === id && prod.cantidad > 1)) {
+                const updatedProduct = {
+                    ...prod, cantidad: prod.cantidad - 1
+                }
+                return updatedProduct;
+            } else {
+                return prod;
+            }
+        })
+        setCart(updatedCart)
+    }
+
+    const addQuantity = (id) => {
+        const updatedCart = cart.map(prod => {
+            if((prod.id === id && prod.cantidad < prod.stock)) {
+                const updatedProduct = {
+                    ...prod, cantidad: prod.cantidad + 1
+                }
+                return updatedProduct;
+            } else {
+                return prod;
+            }
+        })
+        setCart(updatedCart)
+    }
     
     return (
-        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter}}>
+        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter, totalPrice, subtractQuantity, addQuantity}}>
             {children}
         </CartContext.Provider>
     )

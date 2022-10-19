@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from '../../context/CartContext';
 import CartItemCount from '../CartItemCount/CartItemCount';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Cart = () => {
 
-  const {cart, deleteToCart, deleteAllToCart} = useContext(CartContext)
+  const {cart, deleteToCart, deleteAllToCart, totalPrice} = useContext(CartContext)
 
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ const Cart = () => {
         <div className=''>
           <h2 className='cartMessage'>El carrito esta vacio!</h2>
           <h2 className='cartMessage2'>Puedes agregar productos desde el botón añadir al carrito en el catálogo.</h2>
-          <button className='btn btn-dark' onClick={() => navigate('/')} >Ir al Catalogo</button>
+          <button className='btn btn-dark' onClick={() => navigate('/')} >Ir al Catálogo</button>
         </div>
         <img className='imgErorCart' src="./img/emptyCart.svg" alt="notFoundIcon"/>
       </div>
@@ -33,15 +33,16 @@ const Cart = () => {
           <article className='w-100' key={prod.id}>
             <li className='contProdCart' >
               <div className='contProdLeftCart' > <img className='imgProdCart' src={prod.imagen} alt={prod.nombre} /> </div>
-              <div className='contProdCenterCart' > <h3>{prod.nombre}</h3> </div>
-              <div className='contProdCenter2Cart' > <CartItemCount initial={0} quantity={prod.cantidad} stock={prod.stock} /> </div>
-              <div className='contProdCenter3Cart' > <span>${prod.precio}</span> </div>
+              <div className='contProdCenterCart' > <Link className='text-decoration-none text-dark' to={`/item/${prod.id}`}> <h3>{prod.nombre}</h3> </Link> </div>
+              <div className='contProdCenter2Cart' > <CartItemCount prod={prod} /> </div>
+              <div className='contProdCenter3Cart' > <span>${prod.precio*prod.cantidad}</span> </div>
               <div className='contProdRightCart' > <button className='btnElimarCart' onClick={() => deleteToCart(prod.id)} > <FontAwesomeIcon icon={faTrash} /> </button> </div>
             </li>
             <hr className='w-100 mb-4' />
           </article>
         )}
       </ul>
+      <span className='my-3 fw-bold mx-5'>Precio Total: ${totalPrice()}</span>
       <div className='d-flex justify-content-between mb-4'>
         <button className='btn btn-danger w-25 mx-5' onClick={deleteAllToCart} >Eliminar todo</button>
         <button className='btn btn-success w-25 mx-5'>Comprar</button>

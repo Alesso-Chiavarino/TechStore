@@ -1,30 +1,21 @@
 import './CartItemCount.css'
-import { useState } from 'react'
-// import '../ItemCount/ItemCount.css'
+import { useContext } from 'react'
 import {VscTriangleUp, VscTriangleDown} from 'react-icons/vsc'
+import { CartContext } from '../../context/CartContext'
 
-const CartItemCount = ({initial, quantity ,stock}) => {
+const CartItemCount = ({prod}) => {
 
-    const [quantityy, setQuantityy] = useState(quantity)
-
-    const add = () => {
-        setQuantityy(quantityy + 1)
-    }
-    // console.log(quantityy)
-    
-    const subtract = () => {
-        setQuantityy(quantityy - 1)
-    }
+    const {subtractQuantity, addQuantity} = useContext(CartContext);
 
     return (
         <>
             <div className="contIC">
                 <div className='leftSideCounterIC'>
-                    <span className="counterIC" >{quantityy}</span>
+                    <span className="counterIC" >{prod.cantidad}</span>
                 </div>
                 <div className='rightSideCounterIC'>
-                    <button className="btnIC"> <VscTriangleUp onClick={add}  className='arrowIC' /> </button>
-                    <button className="btnIC"> <VscTriangleDown className='arrowIC' onClick={subtract} /> </button>
+                    <button className="btnIC" disabled={prod.cantidad === prod.stock} > <VscTriangleUp className='arrowIC' onClick={() => addQuantity(prod.id)} /> </button>
+                    <button className="btnIC" disabled={prod.cantidad === 1} > <VscTriangleDown className='arrowIC' onClick={() => subtractQuantity(prod.id)} /> </button>
                 </div>
             </div>
         </>

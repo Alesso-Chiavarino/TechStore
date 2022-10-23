@@ -47,8 +47,6 @@
 
 .arrow {
     font-size: 18px !important;
-    /* font-weight: bold; */
-    /* background-color: #4C4C4C; */
 }
 
 .contCategoriesList {
@@ -59,4 +57,16 @@
     width: 400px;
     border-radius: 0 0 4px 4px;
     position: absolute;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+    width: 15px;
+    background-color: #252525;
+    border-left: 0.3px solid rgb(70, 70, 70);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #383838;
+    border-radius: 10px;
 }

@@ -2,8 +2,9 @@ import './ProductsSlider.css'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Item from "../Item/Item";
-import {products} from '../../asyncMock'
 import { useState, useEffect } from 'react';
+import {collection, getDocs, where, query} from 'firebase/firestore'
+import { db } from '../../services/firebaseConfig';
 
 const ProductsSlider = ({beg, fin}) => {
 
@@ -28,18 +29,19 @@ const ProductsSlider = ({beg, fin}) => {
     const [prodsShow, setProdsShow] = useState([])
 
     useEffect(() => {
-        const getProducts = () => {
-        
-            return new Promise((res) => {
-                const filteredProds = products.filter(prod => prod.id >= beg && prod.id <= fin)
-                setTimeout(() => {
-                    res(filteredProds)
-                }, 0)
-            } )
-        }
-        getProducts()
-            .then(res => setProdsShow(res))
-            .catch(error => console.log(error))
+
+        const prodsCollection = collection(db, 'products')
+        const ref = query(prodsCollection, where('order', '>=', beg), where('order', '<=', fin))
+        getDocs(ref)
+            .then(res => {
+                const products = res.docs.map(prod => {
+                    return {
+                        id: prod.id, ...prod.data()
+                    }
+                })
+                setProdsShow(products)
+            })
+            .catch(eror => console.log(eror))
     },[beg, fin])
     
     return (

@@ -8,16 +8,18 @@ import Counter from '../Counter/Counter';
 import { FaSearch } from 'react-icons/fa'
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom';
-import { products } from '../../asyncMock'
 import { useState, useRef } from 'react'
 import { useContext } from 'react'
 import { SearchContext } from '../../context/SearchContext'
 import { CartContext } from '../../context/CartContext';
 import DropdownMenuList from '../DropdownMenuList/DropdownMenuList';
+import { getDocs, collection } from 'firebase/firestore'
+import { db } from '../../services/firebaseConfig';
+
 
 const NavBar = () => {
 
-    const categories = [{
+    const menuCategories = [{
         section: "Placas de video",
         route: "/category/placas-de-video"
     },
@@ -37,50 +39,36 @@ const NavBar = () => {
         section: "Discos rigidos",
         route: "/category/discos-rigidos"
     },
-    // {
-    //     section: "Discos solidos",
-    //     route: "/category/discos-solidos"
-    // },
-    // {
-    //     section: "Coolers",
-    //     route: "/category/coolers"
-    // },
-    // {
-    //     section: "Discos M2",
-    //     route: "/category/discos-m2"
-    // },
-    // {
-    //     section: "Memorias RAM",
-    //     route: "/category/memorias-ram"
-    // },
-    // {
-    //     section: "Perifericos",
-    //     route: "/category/memorias-ram"
-    // },
     ]
 
     //traigo contexto
-    const { searchProducts, writeText } = useContext(SearchContext)
+    const { searchProducts, writeText, putLoader } = useContext(SearchContext)
 
     const [query, setQuery] = useState('')
     const inputRef = useRef(null)
-    // console.log(query)
+
+    const prodCollection = collection(db, 'products');
 
     const getProducts = () => {
-
-        const notFound = products.filter(prod => prod.nombre.toLowerCase().includes('awdawdawawfaegeg'))
-        const filteredProds = products.filter(prod => prod.nombre.toLowerCase().includes(query) || prod.categoria.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query) || prod.descripcion.toLowerCase().includes(query))
-        return new Promise((res) => {
-            setTimeout(() => {
-                res(query === '' ? notFound : filteredProds)
-            }, 0)
-        })
+        putLoader(true);
+        getDocs(prodCollection)
+            .then(res => {
+                const products = res.docs.map(prod => {
+                    return {
+                        id: prod.id, ...prod.data()
+                    }
+                })
+                const filteredProds = products.filter(prod => prod.title.toLowerCase().includes(query) || prod.category.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query));
+                const notFound = <h1>No se encontró nada</h1>
+                const ref = query === '' ? filteredProds : notFound;
+                searchProducts(ref);
+            })
+            .catch(eror => console.log(eror))
+            .finally(() => putLoader(false))
     }
 
     const getSearch = () => {
         getProducts()
-            //guardo lo buscadó en mi contexto
-            .then(res => searchProducts(res));
         writeText(inputRef.current.value)
         inputRef.current.value = ''
     }
@@ -89,8 +77,7 @@ const NavBar = () => {
     const getSearchEnter = (e) => {
         //si presiono enter...
         if (e.keyCode === 13) {
-            getProducts()
-                .then(res => searchProducts(res));
+            getProducts();
             writeText(inputRef.current.value)
             inputRef.current.value = ''
             navigate('/search')
@@ -99,11 +86,13 @@ const NavBar = () => {
     
     //   console.log(search.length)
     // para contador de carrito dinamico
-    const {cartItemCounter} = useContext(CartContext)
+    const {cartItemCounter} = useContext(CartContext);
 
     //dropdown
-    const [dropdown, setDropdown] = useState(false)
+    const [dropdown, setDropdown] = useState(false);
 
+    
+    
     
 
     return (
@@ -134,13 +123,13 @@ const NavBar = () => {
             <nav className='container-fluid navCategory' >
                 <div className='d-flex gap-1 align-items-center contSpanCategories' onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}  > <span className='spanCategories'>Categorias</span> {dropdown ? <FaChevronDown className='arrow' /> : <FaChevronUp className='arrow' />} </div>
                 <ul className='d-flex justify-content-center m-0'>
-                    {categories.map((cat, i) => <MenuList key={i} section={cat.section} route={cat.route} />)}
+                    {menuCategories.map((cat, i) => <MenuList key={i} section={cat.section} route={cat.route} />)}
                 </ul>
             </nav>
             {dropdown &&
                 <div onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}  className="contCategoriesList" >
                     <ul className='contDropdownCategories'>
-                        <DropdownMenuList />
+                        <DropdownMenuList setDropdown={setDropdown} />
                     </ul>
                 </div>}
         </>

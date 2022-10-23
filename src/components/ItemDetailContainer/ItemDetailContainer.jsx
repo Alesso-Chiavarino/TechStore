@@ -1,9 +1,10 @@
-import { products } from "../../asyncMock";
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import './ItemDetailContainer.css'
 import Loader from "../Loader/Loader";
 import { useParams } from "react-router-dom";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { db } from "../../services/firebaseConfig";
 
 const ItemDetailContainer = () => {
 
@@ -12,16 +13,17 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
 
     useEffect(() => {
-      const getProducts = () => {
-        return new Promise((res) => {
-          const findedProd = products.find(prod => prod.id === Number(itemId));
-          setTimeout(() => {
-            res(findedProd)
-          },1000)})
-      }
-        getProducts()
-            .then(data => setProduct(data))
-            .finally(() => setLoading(false))
+      const collectionProd = collection(db, 'products')
+      const ref = doc(collectionProd, itemId)
+      getDoc(ref)
+        .then(res => {
+          const filteredProduct = {
+            id: res.id, ...res.data()
+          }
+          setProduct(filteredProduct)
+        })
+        .catch(eror => console.log(eror))
+        .finally(() => setLoading(false))
           }, [itemId])
   
           if(loading) {

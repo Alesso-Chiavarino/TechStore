@@ -287,7 +287,7 @@ export const products = [
     },
     {
         "id": 27,
-        "nombre": "Msi Mag B460 Tomahawk Gaming Motherboard ",
+        "nombre": "Msi Mag B460 Tomahawk Gaming Motherboard",
         "precio": 121999,
         "precio2": "121.999",
         "imagen": "../img/placa7.jpg",
@@ -415,7 +415,7 @@ export const products = [
         "categoria": "fuentes",
         "categoryName": "Fuentes",
         "stock": 8,
-        "descripcion": "ROG Thor 850W Platinum, fuente de poder con Aura Sync y una pantalla OLEDAura Sync: Personalización avanzada con LEDs RGB direccionables y compatibilidad con Aura SyncPantalla OLED: Monitorea el consumo de energía en tiempo real con pantalla OLED Power DisplaSolución ROG Thermal: Enfriamiento sin ruido (0db) con protección IP5X a prueba de polvo, ventilador wing-blade y diseño del disipador de calor estilo RO80 PLUS Platinum: Construida con condensadores 100% japoneses y otros componentes premium. Cables con Cubierta: Para un fácil manejo y estética en tu armado",
+        "descripcion": "ROG Thor 850W Platinum, fuente de poder con Aura Sync y una pantalla OLEDAura Sync: Personalización avanzada con LEDs RGB direccionables y compatibilidad con Aura SyncPantalla OLED: Monitorea el consumo de energía en tiempo real con pantalla OLED Power DisplaSolución ROG Thermal: Enfriamiento sin ruido (0db) con protección IP5X a prueba de polvo, ventilador wing-blade y diseño del disipador de calor estilo RO80 PLUS Platinum: Construida con condensadores 100% japoneses y otros componentes premium. Cables con Cubierta: Para un fácil manejo y estética en tu armado.",
     },
     {
         "id": 39,
@@ -591,7 +591,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 52,
-        "descripcion": "La solución de refrigeración para PC, posibilitando una mejor circulación de aire que potencia el rendimiento de su equipo, voltaje: 12V, tamaño del Cooler: 4 pulgadas (12 cm.)",
+        "descripcion": "La solución de refrigeración para PC, posibilitando una mejor circulación de aire que potencia el rendimiento de su equipo, voltaje: 12V, tamaño del Cooler: 4 pulgadas (12 cm).",
     },
     {
         "id": 55,
@@ -613,7 +613,7 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 28,
-        "descripcion": "Cooler para Gabinete ATX. Tamaño 120x120x25mmVelocidad de Fan 1200rpmSUPER SILENCIOSO RGBA. Alimentación: Molex 4 Pines para Fuente / 3 Pins Motherboard Air Flow: 46CFM±10%Nivel de Ruido 23.4dBA",
+        "descripcion": "Cooler para Gabinete ATX. Tamaño 120x120x25mmVelocidad de Fan 1200rpmSUPER SILENCIOSO RGBA. Alimentación: Molex 4 Pines para Fuente / 3 Pins Motherboard Air Flow: 46CFM±10%Nivel de Ruido 23.4dBA.",
     },
     {
         "id": 57,
@@ -635,6 +635,6 @@ export const products = [
         "categoria": "coolers",
         "categoryName": "Coolers",
         "stock": 34,
-        "descripcion": "Complete su sistema de refrigeracion Corsair LL rgb con un ventilador adicional Con 16 LEDs RGB direccionables individualmente divididos entre dos bucles de luz separados Flujo de aire - 63 CFM Nivel de ruido - 36 0 decibelios // La llamativa carcasa blanca del ventilador refleja la luz para una iluminacion mas brillante y coincide con el aspecto limpio y refinado de otros productos blancos de Corsair // Cree deslumbrantes patrones y efectos de iluminacion con el potente software Corsair iCUE dando vida a su sistema con una iluminacion RGB dinamica sincronizada en todos sus productos compatibles con iCUE.Tipo de rodamiento: Hidraulico // El control del ventilador Pwm permite un ajuste dinamico de la velocidad entre 360 RPM y 2 200 RPM minimizando el ruido o maximizando el flujo de aire.Consumo de energia: 0,30 A // Aspa del ventilador de 120mm diseñada para un alto flujo de aire y presion estatica //",
+        "descripcion": "Complete su sistema de refrigeracion Corsair LL rgb con un ventilador adicional Con 16 LEDs RGB direccionables individualmente divididos entre dos bucles de luz separados Flujo de aire - 63 CFM Nivel de ruido - 36 0 decibelios // La llamativa carcasa blanca del ventilador refleja la luz para una iluminacion mas brillante y coincide con el aspecto limpio y refinado de otros productos blancos de Corsair // Cree deslumbrantes patrones y efectos de iluminacion con el potente software Corsair iCUE dando vida a su sistema con una iluminacion RGB dinamica sincronizada en todos sus productos compatibles con iCUE.Tipo de rodamiento: Hidraulico // El control del ventilador Pwm permite un ajuste dinamico de la velocidad entre 360 RPM y 2 200 RPM minimizando el ruido o maximizando el flujo de aire.Consumo de energia: 0,30 A // Aspa del ventilador de 120mm diseñada para un alto flujo de aire y presion estatica.",
     }
 ]

@@ -7,11 +7,10 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
 
     const addToCart = (amount, item) => {
-        const product = { cantidad: amount, ...item }
+        const product = { quantity: amount, ...item }
 
         if (isInCart(product.id)) {
             addAmount(product)
-            // console.log('ese producto ya esta')
         } else {
             setCart([...cart, product])
         }
@@ -32,7 +31,7 @@ const CartProvider = ({ children }) => {
             if(prodInCart.id === prod.id) {
                 const updatedProduct = {
                     ...prodInCart,
-                    cantidad: prodInCart.cantidad + prod.cantidad
+                    quantity: prodInCart.quantity + prod.quantity
                 }
                 return updatedProduct;
             } else {
@@ -44,21 +43,21 @@ const CartProvider = ({ children }) => {
 
     const cartItemCounter = () => {
         let acc = 0;
-        cart.map(prod => acc += prod.cantidad)
+        cart.map(prod => acc += prod.quantity)
         return acc;
     }
 
     const totalPrice = () => {
         let acc = 0;
-        cart.map(prod => acc += prod.cantidad * prod.precio)
+        cart.map(prod => acc += prod.quantity * prod.price)
         return acc;
     }
 
     const subtractQuantity = (id) => {
         const updatedCart = cart.map(prod => {
-            if ((prod.id === id && prod.cantidad > 1)) {
+            if ((prod.id === id && prod.quantity > 1)) {
                 const updatedProduct = {
-                    ...prod, cantidad: prod.cantidad - 1
+                    ...prod, quantity: prod.quantity - 1
                 }
                 return updatedProduct;
             } else {
@@ -70,9 +69,9 @@ const CartProvider = ({ children }) => {
 
     const addQuantity = (id) => {
         const updatedCart = cart.map(prod => {
-            if((prod.id === id && prod.cantidad < prod.stock)) {
+            if((prod.id === id && prod.quantity < prod.stock)) {
                 const updatedProduct = {
-                    ...prod, cantidad: prod.cantidad + 1
+                    ...prod, quantity: prod.quantity + 1
                 }
                 return updatedProduct;
             } else {

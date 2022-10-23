@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { FaChevronRight } from 'react-icons/fa'
 import { useState } from 'react'
 
-const DropdownMenuList = () => {
+const DropdownMenuList = ({setDropdown}) => {
 
     const [subcategory1, setSubcategory1] = useState(false);
     const [subcategory2, setSubcategory2] = useState(false);
@@ -54,7 +54,7 @@ const DropdownMenuList = () => {
                 <li className='LiDrowpdownLinkCategory w-100' >
                     <Link className="DrowpdownlinkCategory" to=""> Componentes de PC <FaChevronRight className='text-white mt-1 float-end' /> </Link>
                 </li>
-                {subcategory1 && <ul className='contSubcategory'>{components.map(comp => <li><Link to={`${comp.route}`} className='text-white text-decoration-none'>{comp.section}</Link></li>)}</ul>}
+                {subcategory1 && <ul className='contSubcategory'>{components.map((comp, i) => <li key={i} onClick={() => {setSubcategory1(false); setDropdown(false)}} className='LisubcategoryLink'><Link to={`${comp.route}`} className='subcategoryLink'>{comp.section}</Link></li>)}</ul>}
             </div>
             <div className='d-flex flex-row'>
                 <li className='LiDrowpdownLinkCategory w-100' onMouseOver={() => setSubcategory2(true)} onMouseLeave={() => setSubcategory2(false)} >

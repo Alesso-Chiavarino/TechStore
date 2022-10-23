@@ -6,6 +6,7 @@ const SearchProvider = ({children}) => {
 
     const [search, setSearch] = useState([])
     const [text, setText] = useState('')
+    const [loader, setLoader] = useState(false)
 
     const searchProducts = (prods) => {
         setSearch(prods)
@@ -15,8 +16,12 @@ const SearchProvider = ({children}) => {
         setText(text)
     }
 
+    const putLoader = (loader) => {
+        setLoader(loader)
+    }
+
   return (
-    <SearchContext.Provider value={{search , searchProducts, writeText, text }} >
+    <SearchContext.Provider value={{search , searchProducts, writeText, text, putLoader, loader }} >
         {children}
     </SearchContext.Provider>
   )

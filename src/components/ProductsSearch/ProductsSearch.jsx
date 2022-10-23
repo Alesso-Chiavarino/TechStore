@@ -2,11 +2,15 @@ import  './ProductsSearch.css'
 import { useContext } from 'react'
 import { SearchContext } from '../../context/SearchContext'
 import Item from '../Item/Item'
-// import 
+import Loader from '../Loader/Loader';
 
 const ProductsSearch = () => {
 
-    const {search, text} = useContext(SearchContext)
+    const {search, text, loader} = useContext(SearchContext)
+
+    if(loader) {
+        return <Loader/>
+    }
 
   return (
       <>

@@ -1,19 +1,23 @@
 import './ItemCount.css'
 import {VscTriangleUp, VscTriangleDown} from 'react-icons/vsc'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const ItemCount = ({initial, stock, func, func2}) => {
+const ItemCount = ({initial = 1, stock, onAdd, getCounter}) => {
 
-    
-    const [counter, setCounter] = useState(1)
+    const [counter, setCounter] = useState(initial)
 
     const add = () => {
         counter < stock && setCounter(counter + 1)
     }
 
     const subtract = () => {
-        counter > initial && setCounter(counter - 1)
+        counter > 1 && setCounter(counter - 1)
     }
+
+    //eror solution
+    useEffect(() => {
+        getCounter(counter)
+    })
 
     return (
         <>
@@ -23,16 +27,18 @@ const ItemCount = ({initial, stock, func, func2}) => {
                 </div>
                 <div className='rightSideCounterIC'>
                     <button className="btnIC" disabled={counter === stock} > <VscTriangleUp className='arrowIC' onClick={() => {
-                        add()
-                        func2(counter) }}/>
+                        add()}}/>
                     </button>
-                    <button className="btnIC" disabled={counter === initial} > <VscTriangleDown className='arrowIC' onClick={() => {
+                    <button className="btnIC" disabled={counter === 1} > <VscTriangleDown className='arrowIC' onClick={() => {
                         subtract()
-                        counter > 1 && func2(counter - 2) }}/>
+                        if(counter > 1) {
+                            subtract()
+                        }
+                        }}/>
                     </button>
                 </div>
             </div>
-            <button className='btn btn-dark w-50 mb-3 mx-5 float-end' onClick={() => func(counter)} >Añadir al carrito</button>
+            <button className='btn btn-dark w-50 mb-3 mx-5 float-end' onClick={() => onAdd(counter)} >Añadir al carrito</button>
         </>
     )
 }

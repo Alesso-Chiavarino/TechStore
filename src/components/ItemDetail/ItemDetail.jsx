@@ -19,7 +19,9 @@ const ItemDetail = ({product}) => {
         theme: "light",
         });
 
-    const {addToCart} = useContext(CartContext);
+    const {addToCart, getProductQuantity} = useContext(CartContext);
+
+    const quant = getProductQuantity(product.id)
 
     const onAdd = (value) => {
         addToCart(value, product)
@@ -32,12 +34,11 @@ const ItemDetail = ({product}) => {
         window.scroll(0,0);
     }
 
-    //recibo valor del estado count de itemCount
-    const countValue = (count) => {
-        setProductUnits(count < product.stock ? count + 1 : product.stock)
-    } 
+    const [subtotal, setSubtotal] = useState(1)
 
-    const [productUnits, setProductUnits] = useState(1)
+    const getCounter = (counter) => {
+        setSubtotal(counter * product.price)
+    }
 
   return (
       <>
@@ -66,8 +67,8 @@ const ItemDetail = ({product}) => {
                         </div>
                         <hr />
                         <span className='my-3 d-block fw-bold'>Stock disponible: {product.stock}</span>
-                        <span className='my-3 d-block fw-bold'>Subtotal: ${productUnits * product.price}</span>
-                        <ItemCount func={onAdd} func2={countValue} initial={1} stock={product.stock} />
+                        <span className='my-3 d-block fw-bold'>Subtotal: ${subtotal}</span>
+                        <ItemCount onAdd={onAdd} getCounter={getCounter} initial={quant} stock={product.stock} />
                         <button className='btn btn-dark btnBuyID w-50 mx-5'>Comprar</button>
                     </div>
                 </div>

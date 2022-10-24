@@ -33,8 +33,8 @@ const Cart = () => {
           <article className='w-100' key={prod.id}>
             <li className='contProdCart' >
               <div className='contProdLeftCart' > <img className='imgProdCart' src={prod.image} alt={prod.title} /> </div>
-              <div className='contProdCenterCart' > <Link className='text-decoration-none text-dark' to={`/item/${prod.id}`}> <h3>{prod.tile}</h3> </Link> </div>
-              <div className='contProdCenter2Cart' > <CartItemCount prod={prod} /> </div>
+              <div className='contProdCenterCart' > <Link className='text-decoration-none text-dark' to={`/item/${prod.id}`}> <h3>{prod.title}</h3> </Link> </div>
+              <div className='contProdCenter2Cart' > <CartItemCount prod={prod} /> <span className='availabilitySpan'>{prod.stock} disponibles</span> </div>
               <div className='contProdCenter3Cart' > <span>${prod.price*prod.quantity}</span> </div>
               <div className='contProdRightCart' > <button className='btnElimarCart' onClick={() => deleteToCart(prod.id)} > <FontAwesomeIcon icon={faTrash} /> </button> </div>
             </li>

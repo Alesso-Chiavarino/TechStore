@@ -59,8 +59,9 @@ const NavBar = () => {
                     }
                 })
                 const filteredProds = products.filter(prod => prod.title.toLowerCase().includes(query) || prod.category.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query));
-                const notFound = <h1>No se encontró nada</h1>
-                const ref = query === '' ? filteredProds : notFound;
+                //para que no de error el map
+                const notFound = products.filter(prod => prod.title === 'notFound')
+                const ref = query === '' ? notFound : filteredProds;
                 searchProducts(ref);
             })
             .catch(eror => console.log(eror))
@@ -78,6 +79,7 @@ const NavBar = () => {
         //si presiono enter...
         if (e.keyCode === 13) {
             getProducts();
+            window.scroll(0,0);
             writeText(inputRef.current.value)
             inputRef.current.value = ''
             navigate('/search')
@@ -127,11 +129,12 @@ const NavBar = () => {
                 </ul>
             </nav>
             {dropdown &&
-                <div onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}  className="contCategoriesList" >
+                <div onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)} className="contCategoriesList" >
                     <ul className='contDropdownCategories'>
                         <DropdownMenuList setDropdown={setDropdown} />
                     </ul>
-                </div>}
+                </div>
+            }
         </>
     );
 }

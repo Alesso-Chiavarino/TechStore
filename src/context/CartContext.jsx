@@ -31,7 +31,7 @@ const CartProvider = ({ children }) => {
             if(prodInCart.id === prod.id) {
                 const updatedProduct = {
                     ...prodInCart,
-                    quantity: prodInCart.quantity + prod.quantity
+                    quantity: prod.quantity
                 }
                 return updatedProduct;
             } else {
@@ -80,9 +80,14 @@ const CartProvider = ({ children }) => {
         })
         setCart(updatedCart)
     }
+
+    const getProductQuantity = (id) => {
+        const product = cart.find(prod => prod.id === id)
+        return product?.quantity;
+    }
     
     return (
-        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter, totalPrice, subtractQuantity, addQuantity}}>
+        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter, totalPrice, subtractQuantity, addQuantity, getProductQuantity}}>
             {children}
         </CartContext.Provider>
     )

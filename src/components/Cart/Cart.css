@@ -9,6 +9,7 @@
 
 .contProdLeftCart, .contProdCenterCart, .contProdRightCart, .contProdCenter2Cart, .contProdCenter3Cart {
     font-weight: bold;
+    /* width: auto; */
     width: 20%;
     display: flex;
     justify-content: center;
@@ -18,10 +19,31 @@
     font-size: 20px !important;
 }
 
+.contProdCenter2Cart {
+    /* margin-left: 50px; */
+    /* width: 300px; */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-content: center;
+    justify-content: center;
+}
+
+.availabilitySpan {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0 0 -30px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    font-size: 13px;
+    font-weight: normal;
+    color: #5a5a5a;
+}
+
 .contProdCart {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 10px;
 }

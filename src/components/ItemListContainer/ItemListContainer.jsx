@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
 import Loader from '../Loader/Loader';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import {collection, getDocs, query, where} from 'firebase/firestore'
 import {db} from '../../services/firebaseConfig'
+import {FaAngleRight} from 'react-icons/fa'
 
 const ItemListContainer = () => {
 
@@ -35,7 +36,16 @@ const ItemListContainer = () => {
 
     return(
         <>
-            <h1 className='text-center mt-4 mb-5'>{prods[0].categoryName}</h1>
+            <div className='contCategoryName'>
+                <h1 className='categoryName'>{prods[0].categoryName}</h1>
+            </div>
+            <div className='d-flex align-items-center gap-2 my-4 container'>
+                <Link to={'/'} className='spanDivider text-dark text-decoration-none'>Inicio</Link>
+                <FaAngleRight className='dividerAngle' />
+                <Link to={'/category'} className='spanDivider text-dark text-decoration-none'>Categorias</Link>
+                <FaAngleRight className='dividerAngle'/>
+                {categoryName !== undefined && <span className='spanDivider'>{prods[0].categoryName}</span>}
+            </div>
             <div>
                 <ItemList products = {prods} />
             </div>

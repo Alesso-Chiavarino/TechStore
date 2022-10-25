@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import {RiArrowGoBackLine} from 'react-icons/ri'
 
 const ItemDetail = ({product}) => {
 
@@ -43,6 +44,7 @@ const ItemDetail = ({product}) => {
   return (
       <>
           <article className='cardDetail container bg-white p-3 rounded-2'>
+                <button className='btn' onClick={() => navigate(-1) } ><RiArrowGoBackLine/></button>
                 <div className='topSide'>
                     <div className="leftSide">
                         <div className="contImgID">

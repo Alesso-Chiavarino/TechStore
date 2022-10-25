@@ -45,7 +45,7 @@ const Cart = () => {
       <span className='my-3 fw-bold mx-5'>Precio Total: ${totalPrice()}</span>
       <div className='d-flex justify-content-between mb-4'>
         <button className='btn btn-danger w-25 mx-5' onClick={deleteAllToCart} >Eliminar todo</button>
-        <button className='btn btn-success w-25 mx-5'>Comprar</button>
+        <Link to={'/checkout'} className='btn btn-success w-25 mx-5'>Comprar</Link>
       </div>
     </section>
   )

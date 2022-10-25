@@ -9,6 +9,7 @@ import Cart from "./components/Cart/Cart";
 import SearchProvider from './context/SearchContext'
 import ProductsSearch from "./components/ProductsSearch/ProductsSearch";
 import CartProvider from "./context/CartContext";
+import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
     return (
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="/category" element={<ItemListContainer />} />
               <Route path="*" element={<Eror404 />} />
               <Route path="/search" element={<ProductsSearch />} />
+              <Route path="/checkout" element={<Checkout />} />
             </Routes>
             <Footer />
           </BrowserRouter>

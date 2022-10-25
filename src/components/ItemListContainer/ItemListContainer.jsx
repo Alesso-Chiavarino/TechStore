@@ -37,7 +37,7 @@ const ItemListContainer = () => {
     return(
         <>
             <div className='contCategoryName'>
-                <h1 className='categoryName'>{prods[0].categoryName}</h1>
+                {categoryName === undefined ? <h1 className='categoryName'>Todos nuestros productos</h1> : <h1 className='categoryName'>{prods[0].categoryName}</h1>}
             </div>
             <div className='d-flex align-items-center gap-2 my-4 container'>
                 <Link to={'/'} className='spanDivider text-dark text-decoration-none'>Inicio</Link>

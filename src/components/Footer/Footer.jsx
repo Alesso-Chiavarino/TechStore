@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <>
     <WhatsAppIcon/>
-      <div className="mt-5 container-fluid menu-container">
+      <div className=" container-fluid menu-container">
         <ul className="contMenuLink mb-0" >
           {/* en un futuro se creará un componente para estos links. */}
           {links.map((link, i) => <li onClick={() => window.scroll(0,0)} style={{ listStyle: "none" }} key={i} > <NavLink className="menuLink mx-4" to={link.route}>{link.section}</NavLink> </li>)}

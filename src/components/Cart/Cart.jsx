@@ -4,21 +4,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faTrash} from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from '../../context/CartContext';
 import CartItemCount from '../CartItemCount/CartItemCount';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
   const {cart, deleteToCart, deleteAllToCart, totalPrice} = useContext(CartContext)
 
-  const navigate = useNavigate();
-
   if (cart.length === 0) {
     return (
-      <div className='contCartEmpty container' >
+      <div className='contCartEmpty container mb-5' >
         <div className=''>
           <h2 className='cartMessage'>El carrito esta vacio!</h2>
           <h2 className='cartMessage2'>Puedes agregar productos desde el botón añadir al carrito en el catálogo.</h2>
-          <button className='btn btn-dark' onClick={() => navigate('/')} >Ir al Catálogo</button>
+          <Link to={'/category'} ><button className='btn btn-dark'>Ir al Catálogo</button></Link>
         </div>
         <img className='imgErorCart' src="./img/emptyCart.svg" alt="notFoundIcon"/>
       </div>
@@ -26,7 +24,7 @@ const Cart = () => {
   }
 
   return (
-    <section className='cartContainer container my-0 d-flex flex-column'>
+    <section className='cartContainer container my-0 d-flex flex-column mb-5'>
       <span className='cartTitle' > <FontAwesomeIcon className='cartIconCart' icon={faCartShopping} /> <h3>Carrito de compras</h3> </span>
       <ul className="d-flex flex-wrap">
         {cart.map((prod) =>
@@ -45,7 +43,7 @@ const Cart = () => {
       <span className='my-3 fw-bold mx-5'>Precio Total: ${totalPrice()}</span>
       <div className='d-flex justify-content-between mb-4'>
         <button className='btn btn-danger w-25 mx-5' onClick={deleteAllToCart} >Eliminar todo</button>
-        <Link to={'/checkout'} className='btn btn-success w-25 mx-5'>Comprar</Link>
+        <Link onClick={() => window.scroll(0,0)} to={'/checkout'} className='btn btn-success w-25 mx-5'>Checkout</Link>
       </div>
     </section>
   )

@@ -46,7 +46,7 @@ const ItemListContainer = () => {
                 <FaAngleRight className='dividerAngle'/>
                 {categoryName !== undefined && <span className='spanDivider'>{prods[0].categoryName}</span>}
             </div>
-            <div>
+            <div className='mb-5'>
                 <ItemList products = {prods} />
             </div>
         </>    

@@ -43,7 +43,7 @@ const ItemDetail = ({product}) => {
 
   return (
       <>
-          <article className='cardDetail container bg-white p-3 rounded-2'>
+          <article className='cardDetail mb-5 container bg-white p-3 rounded-2'>
                 <button className='btn' onClick={() => navigate(-1) } ><RiArrowGoBackLine/></button>
                 <div className='topSide'>
                     <div className="leftSide">

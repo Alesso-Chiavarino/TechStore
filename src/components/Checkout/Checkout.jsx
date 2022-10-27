@@ -2,12 +2,13 @@ import { useContext, useState, useRef } from 'react'
 import { CartContext } from '../../context/CartContext'
 import './Checkout.scss'
 import { db } from '../../services/firebaseConfig'
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp, getDocs, query, where, documentId, writeBatch } from 'firebase/firestore'
 import Loader from '../Loader/Loader'
 import ProductsCheckout from '../ProductsCheckout/ProductsCheckout'
 import PurchaseMessage from '../PurchaseMessage/PurchaseMessage'
 import {IoAlert} from 'react-icons/io5'
 import {RiAlertFill} from 'react-icons/ri'
+import emailjs from '@emailjs/browser';
 
 const Checkout = () => {
 
@@ -64,31 +65,92 @@ const Checkout = () => {
     const cardCvcAlert = useRef()
     const wrongFormAlert = useRef()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         if ((nameValidation && emailValidation && phoneValidation && cardNumberValidation && cardNameValidation && cardCvcValidation && cardValidTHRUValidation)) {
             e.preventDefault();
             setLoader(true)
             setTotal(totalPrice())
 
-            const order = {
-                buyer: { name, email, phone, cardNumber, cardName, cardCvc, cardValidTHRU },
-                items: cart,
-                total: total,
-                date: serverTimestamp(),
+            try {
+                const order = {
+                    buyer: { name, email, phone, cardNumber, cardName, cardCvc, cardValidTHRU },
+                    items: cart,
+                    total: total,
+                    date: serverTimestamp(),
+                }
+
+                const ids = cart.map((prod) => prod.id);
+
+                const productsRef = collection(db, 'products');
+
+                const productsAddedFromFirestore = await getDocs(
+                    query(productsRef, where(documentId(), 'in', ids))
+                );
+
+                const { docs } = productsAddedFromFirestore;
+
+                const outOfStock = [];
+
+                const batch = writeBatch(db);
+
+                docs.forEach((doc) => {
+                    const dataDoc = doc.data();
+                    const stockDB = dataDoc.stock;
+
+                    const productAddedToCart = cart.find(
+                        (prod) => prod.id === doc.id
+                    );
+
+                    const prodQuantity = productAddedToCart?.quantity;
+
+                    if (stockDB >= prodQuantity) {
+                        batch.update(doc.ref, { stock: stockDB - prodQuantity });
+                    } else {
+                        outOfStock.push({ id: doc.id, ...dataDoc });
+                    }
+                });
+
+                if (outOfStock.length === 0) {
+                    batch.commit();
+
+                    const orderRef = collection(db, 'orders');
+                    const orderAdded = await addDoc(orderRef, order);
+                    setOrderID(orderAdded.id);
+                    deleteAllToCart();
+                } else {
+                    console.log('No hay stock de algún producto');
+                }
+
+                //enviar email
+
+                emailjs.sendForm('service_07ip1so', 'template_pb4rlej', e.target, 'JBrEOZfmUREkKsosp')
+
+                    .then((result) => {
+                        console.log(result.text)
+
+                    }, (error) => {
+                        alert(error.text)
+
+                    });
+
+            } catch (eror) {
+                console.log(eror)
+            } finally {
+                setLoader(false)
             }
 
-            const ordersCollection = collection(db, 'orders')
-            addDoc(ordersCollection, order)
-                .then(res => {
-                    setOrderID(res.id)
-                    deleteAllToCart();
-                })
-                .catch(err => {
-                    console.log(err)
-                })
-                .finally(() => {
-                    setLoader(false)
-                })
+            // const ordersCollection = collection(db, 'orders')
+            // addDoc(ordersCollection, order)
+            //     .then(res => {
+            //         setOrderID(res.id)
+            //         deleteAllToCart();
+            //     })
+            //     .catch(err => {
+            //         console.log(err)
+            //     })
+            //     .finally(() => {
+            //         setLoader(false)
+            //     })
         } else {
             e.preventDefault()
             wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-block'

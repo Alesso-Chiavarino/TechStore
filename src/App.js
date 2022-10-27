@@ -1,5 +1,5 @@
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import NavBar from './components/Navbar/NavBar'
+import NavBar from './components/NavBar/NavBar'
 import Eror404 from "./components/Eror404/Eror404";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from "./components/Home/Home";

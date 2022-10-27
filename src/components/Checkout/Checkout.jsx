@@ -7,9 +7,11 @@ import Loader from '../Loader/Loader'
 import ProductsCheckout from '../ProductsCheckout/ProductsCheckout'
 import PurchaseMessage from '../PurchaseMessage/PurchaseMessage'
 import {IoAlert} from 'react-icons/io5'
+import {RiAlertFill} from 'react-icons/ri'
 
 const Checkout = () => {
 
+    //estados formularios
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -33,6 +35,7 @@ const Checkout = () => {
         cardValid: /^\d{4}$/ // si o si 4 numeros
     }
 
+    //validaciones
     const [nameValidation, setNameValidation] = useState(false)
     const [emailValidation, setEmailValidation] = useState(false)
     const [phoneValidation, setPhoneValidation] = useState(false)
@@ -59,6 +62,7 @@ const Checkout = () => {
     const cardValidAlert = useRef()
     const cardNameAlert = useRef()
     const cardCvcAlert = useRef()
+    const wrongFormAlert = useRef()
 
     const handleSubmit = (e) => {
         if ((nameValidation && emailValidation && phoneValidation && cardNumberValidation && cardNameValidation && cardCvcValidation && cardValidTHRUValidation)) {
@@ -87,11 +91,13 @@ const Checkout = () => {
                 })
         } else {
             e.preventDefault()
+            wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-block'
         }
         
     }
     const handleChangeName = (e) => {
         setName(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if(expresiones.name.test(name)) {
             setNameValidation(true)
             // validaciones.name = true;
@@ -104,6 +110,7 @@ const Checkout = () => {
 
     const handleChangeEmail = (e) => {
         setEmail(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.email.test(email)) {
             setEmailValidation(true)
             // validaciones.email = true
@@ -116,6 +123,7 @@ const Checkout = () => {
 
     const handleChangePhone = (e) => {
         setPhone(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.phone.test(phone)) {
             setPhoneValidation(true)
             // validaciones.phone = true
@@ -128,6 +136,7 @@ const Checkout = () => {
 
     const handleChangeCardNumber = (e) => {
         setCardNumber(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardNumber.test(cardNumber)) {
             setCardNumberValidation(true)
             // validaciones.cardNumber = true
@@ -140,6 +149,7 @@ const Checkout = () => {
 
     const handleChangeCardName = (e) => {
         setCardName(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardName.test(cardName)) {
             setCardNameValidation(true)
             // validaciones.cardName = true
@@ -152,6 +162,7 @@ const Checkout = () => {
 
     const handleChangeCardCvc = (e) => {
         setCardCvc(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardCvc.test(cardCvc)) {
             setCardCvcValidation(true)
             // validaciones.cardCvc = true
@@ -164,6 +175,7 @@ const Checkout = () => {
 
     const handleChangeCardValidTHRU = (e) => {
         setCardValidTHRU(e.target.value)
+        wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardValid.test(cardValidTHRU)) {
             setCardValidTHRUValidation(true)
             // validaciones.cardValid = true
@@ -180,7 +192,7 @@ const Checkout = () => {
 
     if (orderID) {
         return (
-            <PurchaseMessage name={name} phone={phone} total={total} cardNumber={cardNumber}/>  
+            <PurchaseMessage name={name} email={email} phone={phone} total={total} cardNumber={cardNumber} orderID={orderID} />  
         )
     }
 
@@ -238,14 +250,13 @@ const Checkout = () => {
                                     </div>
                                 </div>
                             </div>
+                            <span ref={wrongFormAlert} className='bg-danger text-white rounded-1 p-1 d-none'><RiAlertFill/> Por favor, ingrese los datos correctamente</span>
                             <span className='text-danger mb-2 d-none' ref={cardNumberAlert}><IoAlert/>Numero de la tarjeta debe contener 16 números</span>
                             <span className='text-danger mb-2 d-none' ref={cardNameAlert}><IoAlert/>Nombre de la tarjeta no debe contener números</span>
                             <span className='text-danger mb-2 d-none' ref={cardCvcAlert}><IoAlert/>Codigo de seguridad debe contener 3 números</span>
                             <span className='text-danger mb-2 d-none' ref={cardValidAlert}><IoAlert/>Fecha de vencimiento invalida</span>
                             <p className="text-bg-danger rounded-1 d-none"><i className="fa-solid fa-triangle-exclamation text-white mx-2"></i>Por favor, rellene los datos correctamente</p>
-                            {/* <div className="form-group"> */}
-                            <button className="btn btn-success mt-2 mb-5" type="submit" onClick={() => window.scroll(0, 0)}>Confirmar compra</button> 
-                            {/* </div> */}
+                            <button className="btn btn-success mt-2 mb-5" type="submit" style={{background: nameValidation && emailValidation && phoneValidation && cardNumberValidation && cardNameValidation && cardCvcValidation && cardValidTHRUValidation? '#198754' : '#074617'}} onClick={() => window.scroll(0, 0)}>Confirmar compra</button> 
                         </div>
                     </form>
                 </div>

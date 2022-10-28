@@ -58,7 +58,7 @@ const NavBar = () => {
                         id: prod.id, ...prod.data()
                     }
                 })
-                const filteredProds = products.filter(prod => prod.title.toLowerCase().includes(query) || prod.category.toLowerCase().includes(query) || prod.categoryName.toLowerCase().includes(query));
+                const filteredProds = products.filter(prod => prod.title.includes(query) || prod.category.includes(query) || prod.categoryName.includes(query));
                 //para que no de error el map
                 const notFound = products.filter(prod => prod.title === 'notFound')
                 const ref = query === '' ? notFound : filteredProds;
@@ -108,7 +108,7 @@ const NavBar = () => {
                         <input
                             ref={inputRef}
                             onKeyUp={getSearchEnter}
-                            onChange={(e) => setQuery(e.target.value)}
+                            onChange={(e) => setQuery(e.target.value.toLowerCase())}
                             placeholder="Buscá lo que desees!"
                             className="me-2 navSearch form-control"
                             aria-label="Search"

@@ -1,4 +1,4 @@
-import { useContext, useState, useRef, useEffect } from 'react'
+import { useContext, useState, useRef } from 'react'
 import { CartContext } from '../../context/CartContext'
 import './Checkout.scss'
 import { db } from '../../services/firebaseConfig'
@@ -236,7 +236,6 @@ const Checkout = () => {
             order: orderID,
         };
         
-        console.log(templateParams)
         emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
 
         return (

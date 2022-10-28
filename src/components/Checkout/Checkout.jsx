@@ -120,18 +120,11 @@ const Checkout = () => {
                 } else {
                     console.log('No hay stock de algún producto');
                 }
-
-                //enviar email
-
-                emailjs.sendForm('service_07ip1so', 'template_pb4rlej', e.target, 'JBrEOZfmUREkKsosp')
-
-                    .then((result) => {
-                        console.log(result.text)
-
-                    }, (error) => {
-                        alert(error.text)
-
-                    });
+                
+                emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_PUBLIC_KEY)
+                    .then(res => console.log(res.text))
+                    .catch(err => console.log(err.text));
+                
 
             } catch (eror) {
                 console.log(eror)
@@ -258,6 +251,8 @@ const Checkout = () => {
         )
     }
 
+    // console.log(orderID)
+
     return (
         <>
             <h1 className='text-center mt-3'>Finalizá tu compra</h1>
@@ -277,7 +272,7 @@ const Checkout = () => {
                         </div>
                         <div className='d-flex flex-column'>
                             <label>Email</label>
-                            <input onChange={handleChangeEmail} onKeyUp={handleChangeEmail} onBlur={handleChangeEmail} type="text" value={email} name="email" className='form-control mb-2' placeholder="john@gmail.com" />
+                            <input onChange={handleChangeEmail} onKeyUp={handleChangeEmail} onBlur={handleChangeEmail} type="text" value={email} name="user_email" className='form-control mb-2' placeholder="john@gmail.com" />
                             <span className='text-danger mb-2 d-none' ref={emailAlert}><IoAlert/>Dirección de correo electrónico incorrecto</span>
                         </div>
                         <div className='d-flex flex-column'>
@@ -306,7 +301,7 @@ const Checkout = () => {
                                         <div className="row justify-content-end">
                                             <div className="col-md-6 d-flex flex-column">
                                                 <label>Hasta</label>
-                                                <input onChange={handleChangeCardValidTHRU} onKeyUp={handleChangeCardValidTHRU} onBlur={handleChangeCardValidTHRU} value={cardValidTHRU} type="text" name="cardValidDate" placeholder="00/00" />
+                                                <input onChange={handleChangeCardValidTHRU} onKeyUp={handleChangeCardValidTHRU} onBlur={handleChangeCardValidTHRU} value={cardValidTHRU} type="text" name="cardValid" placeholder="00/00" />
                                             </div>
                                         </div>
                                     </div>

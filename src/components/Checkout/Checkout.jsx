@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from 'react'
+import { useContext, useState, useRef, useEffect } from 'react'
 import { CartContext } from '../../context/CartContext'
 import './Checkout.scss'
 import { db } from '../../services/firebaseConfig'
@@ -120,11 +120,6 @@ const Checkout = () => {
                 } else {
                     console.log('No hay stock de algún producto');
                 }
-                
-                emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_PUBLIC_KEY)
-                    .then(res => console.log(res.text))
-                    .catch(err => console.log(err.text));
-                
 
             } catch (eror) {
                 console.log(eror)
@@ -132,18 +127,6 @@ const Checkout = () => {
                 setLoader(false)
             }
 
-            // const ordersCollection = collection(db, 'orders')
-            // addDoc(ordersCollection, order)
-            //     .then(res => {
-            //         setOrderID(res.id)
-            //         deleteAllToCart();
-            //     })
-            //     .catch(err => {
-            //         console.log(err)
-            //     })
-            //     .finally(() => {
-            //         setLoader(false)
-            //     })
         } else {
             e.preventDefault()
             wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-block'
@@ -246,12 +229,20 @@ const Checkout = () => {
     }
 
     if (orderID) {
+
+        var templateParams = {
+            name: name,
+            user_email: email,
+            order: orderID,
+        };
+        
+        console.log(templateParams)
+        emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
+
         return (
             <PurchaseMessage name={name} email={email} phone={phone} total={total} cardNumber={cardNumber} orderID={orderID} />  
         )
     }
-
-    // console.log(orderID)
 
     return (
         <>

@@ -5,20 +5,20 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 30px 0;
+    padding: 1.875em 0;
 }
 
 .categoryName {
     color: #fff;
     font-style: italic;
-    letter-spacing: 1px;
+    letter-spacing: 0.02em;
     font-weight: bold;
 }
 
 .spanDivider {
-    font-size: 25px;
+    font-size: 1.5625em;
 }
 
 .dividerAngle {
-    font-size: 25px;
+    font-size: 1.5625em;
 }

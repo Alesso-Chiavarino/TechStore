@@ -11,18 +11,18 @@
 .buyCard {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: #fff;
-    padding: 22px;
+    padding: 1.375em;
     background-color: #1b1b1b;
-    border-radius: 20px;
-    margin-bottom: 16px;
+    border-radius: 1.25em;
+    margin-bottom: 1em;
 
     img {
         width: 3.375em;
-        margin-bottom: 16px;
+        margin-bottom: 1em;
     }
 
     label {
-        margin-bottom: 2px;
+        margin-bottom: 0.125em;
     }
 
     input {
@@ -31,7 +31,7 @@
         border-left: none;
         border-right: none;
         background: none !important;
-        margin-bottom: 16px;
+        margin-bottom: 1em;
         outline: none;
     }
 
@@ -41,7 +41,7 @@
         flex-direction: column;
 
         input {
-            font-size: 16px;
+            font-size: 1em;
         }
 
         input:last-child {

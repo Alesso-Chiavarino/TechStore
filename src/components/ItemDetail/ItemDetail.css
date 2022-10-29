@@ -1,14 +1,15 @@
 .rightSide {
-    /* height: 550px; */
-    width: 700px;
-    padding: 20px;
+    width: 40%;
+    padding: 1.25em;
     border: 0.1px solid #7f7f7f7d;
-    border-radius: 8px;
+    border-radius: 0.5em;
+}
+
+.leftSide {
+    width: 60%;
 }
 
 .contImgID {
-    height: 550px;
-    width: 700px;
     overflow: hidden;
     background-color: #fff;
     display: flex;
@@ -17,27 +18,26 @@
 }
 
 .cardDetail {
-    -webkit-box-shadow: 4px 2px 13px -7px rgba(0,0,0,1);
-    -moz-box-shadow: 4px 2px 13px -7px rgba(0,0,0,1);
-    box-shadow: 4px 2px 13px -7px rgba(0,0,0,1);
+    -webkit-box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0,0,0,1);
+    -moz-box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0,0,0,1);
+    box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0,0,0,1);
 }
 
 .imgID {
-    height: 500px;
-    width: 600px;
+    height: 31.25em;
+    width: 37.5em;
 }
 
-.productNameID {
-    margin-bottom: 20px;
-}
+/* .productNameID {
+    margin-bottom: 0;
+} */
 
 .priceID {
     display: block;
-    font-size: 33px;
-    line-height: 32px;
-    padding-top: 4px;
+    font-size: 2.0625em;
+    line-height: 2em;
+    padding-top: 0.25em;
     font-weight: 500;
-    margin-top: 20px;
 }
 
 .messageID {
@@ -46,32 +46,34 @@
 }
 
 .contIconsID {
-    margin-top: 15px;
+    margin-top: 0.9375em;
 }
 
 .mercadoPagoIcon, .naranjaIcon, .visaIcon, .americanExpressIcon,.mastercardIconn, .brubankIcon {
-    margin-top: 10px;
-    width: 85px;
-    margin-right: 20px;
+    margin-top: 0.625em;
+    width: 5.3125em;
+    margin-right: 1.25em;
 }
 
 .mastercardIcon {
-    margin-right: 10px;
-    font-size: 60px;
+    margin-right: 0.625em;
+    font-size: 3.75em;
     color: #F79E1B;
 }
 
 .brubankIcon {
-    width: 100px;
+    width: 6.25em;
 }
 
 .topSide {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.25em;
 }
 
 .btnBuyID {
     float: right;
+    width: 50%;
+    margin: 0 50px;
 }

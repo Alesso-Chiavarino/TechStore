@@ -1,20 +1,12 @@
 .details {
-    /* background-color: #dadada; */
-    /* background-color: #c42828; */
     width: 100%;
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
-    /* margin-top: 0px !important; */
+    margin-top: 12.5em;
     z-index: -5045;
 }
 
-/* .contItemDetail { */
-    /* margin: 20px; */
-    /* gap: 20px; */
-/* } */
 .contItemDetail {
-    margin-top: -150px;
+    margin-top: -9.375em;
 }

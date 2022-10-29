@@ -1,12 +1,12 @@
 .resultMessage {
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
 .quantityMessage {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .contSearchResultMessage {
-    margin-top: 30px !important;
-    margin-left: 100px;
+    margin-top: 1.875em;
+    margin-left: 6.25em;
 }

@@ -10,6 +10,7 @@ import SearchProvider from './context/SearchContext'
 import ProductsSearch from "./components/ProductsSearch/ProductsSearch";
 import CartProvider from "./context/CartContext";
 import Checkout from "./components/Checkout/Checkout";
+import './styles/responsive.scss'
 
 const App = () => {
     return (

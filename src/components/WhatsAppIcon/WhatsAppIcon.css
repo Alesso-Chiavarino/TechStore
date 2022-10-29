@@ -3,16 +3,16 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 40px;
-    right: 50px;
+    bottom: 1em;
+    right: 1em;
     z-index: 999999;
-    font-size: 30px;
+    font-size: 1.875rem;
     background-color: #25d366;
-    width: 60px;
-    height: 60px;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
     cursor: pointer;
-    padding-bottom: 8px;
+    padding-bottom: 0.3em;
 }
 
 .icono_whastapp:hover {
@@ -20,6 +20,6 @@
 }
 
 .whatsAppIcon {
-    font-size: 38px;
+    font-size: 1.3em;
     color: #fff;
 }

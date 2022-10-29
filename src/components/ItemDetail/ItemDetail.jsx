@@ -71,7 +71,7 @@ const ItemDetail = ({product}) => {
                         <span className='my-3 d-block fw-bold'>Stock disponible: {product.stock}</span>
                         <span className='my-3 d-block fw-bold'>Subtotal: ${subtotal}</span>
                         <ItemCount onAdd={onAdd} getCounter={getCounter} initial={quant} stock={product.stock} />
-                        <button className='btn btn-dark btnBuyID w-50 mx-5'>Comprar</button>
+                        <button className='btn btn-dark btnBuyID'>Comprar</button>
                     </div>
                 </div>
                 <hr />

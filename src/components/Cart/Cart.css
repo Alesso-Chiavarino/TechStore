@@ -1,30 +1,26 @@
 .cartContainer {
     min-height: 50vh;
-    margin-top: 20px !important;
-    border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 1.25em !important;
+    border-radius: 0.3125em;
+    margin-top: 1.25em;
     padding: 0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .contProdLeftCart, .contProdCenterCart, .contProdRightCart, .contProdCenter2Cart, .contProdCenter3Cart {
     font-weight: bold;
-    /* width: auto; */
     width: 20%;
     display: flex;
     justify-content: center;
 }
 
 .contProdCenterCart h3 {
-    font-size: 20px !important;
+    font-size: 1.25em;
 }
 
 .contProdCenter2Cart {
-    /* margin-left: 50px; */
-    /* width: 300px; */
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     align-content: center;
     justify-content: center;
 }
@@ -32,10 +28,9 @@
 .availabilitySpan {
     text-align: center;
     width: 100%;
-    margin: 5px 0 0 -30px;
+    margin: 0.3125em 0 0 -1.875em;
     font-family: Arial, Helvetica, sans-serif;
-    /* text-align: center; */
-    font-size: 13px;
+    font-size: 0.8125em;
     font-weight: normal;
     color: #5a5a5a;
 }
@@ -45,37 +40,38 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .imgProdCart {
-    padding: 10px;
-    border-radius: 5px;
-    border: 0.1px solid #7f7f7f49;
-    width: 120px;
-    height: 120px;
+    padding: 0.625em;
+    border-radius: 0.3125em;
+    border: 0.1008px solid #7f7f7f49;
+    width: 7.5em;
+    height: 7.5em;
 }
 
 .cartTitle {
+    border-radius: 0.3125em 0.3125em 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    font-size: 25px !important;
-    padding: 10px;
+    gap: 0.5em;
+    font-size: 1.5625em;
+    padding: 0.625em;
     text-align: center;
     color: #fff;
     background-color: #252525;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625em;
 }
 
 .cartTitle h3 {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 1.75em;
 }
 
 .btnElimarCart {
-    font-size: 20px;
+    font-size: 1.25em;
     background: none;
     border: 0;
 }
@@ -84,24 +80,24 @@
 }
 
 .contCartEmpty {
-    gap: 100px;
+    gap: 6.25em;
     justify-content: center;
     align-items: center;
     display: flex;
-    height: 600px;
+    height: 37.5em;
 }
 
 .cartMessage {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 2.1875em;
 }
 
 .cartMessage2 {
-    font-size: 20px;
-    margin: 20px 0;
+    font-size: 1.25em;
+    margin: 1.25em 0;
 }
 
 .imgErorCart {
-    width: 500px;
-    height: 500px;
+    width: 31.25em;
+    height: 31.25em;
 }

@@ -12,7 +12,7 @@ import emailjs from '@emailjs/browser';
 
 const Checkout = () => {
 
-    //estados formularios
+    // estados formularios
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -23,6 +23,18 @@ const Checkout = () => {
     const [orderID, setOrderID] = useState('')
     const [total, setTotal] = useState(0)
     const [loader, setLoader] = useState(false)
+
+    //estados formularios
+    // const [name, setName] = useState('Alessandro Chiavarino')
+    // const [email, setEmail] = useState('techstoreenterprise@gmail.com')
+    // const [phone, setPhone] = useState('3513079987')
+    // const [cardNumber, setCardNumber] = useState('1111111111111912')
+    // const [cardName, setCardName] = useState('Alessandro Chiavarino')
+    // const [cardCvc, setCardCvc] = useState('123')
+    // const [cardValidTHRU, setCardValidTHRU] = useState('1234')
+    // const [orderID, setOrderID] = useState('')
+    // const [total, setTotal] = useState(0)
+    // const [loader, setLoader] = useState(false)
 
     const { cart, deleteAllToCart, totalPrice } = useContext(CartContext)
 
@@ -285,7 +297,7 @@ const Checkout = () => {
                                         <label>Nombre</label>
                                         <input onChange={handleChangeCardName} onKeyUp={handleChangeCardName} onBlur={handleChangeCardName} value={cardName} type="text" name="cardName" placeholder="JOHN DOE" />
                                         <label>CVC</label>
-                                        <input onChange={handleChangeCardCvc} onKeyUp={handleChangeCardCvc} onBlur={handleChangeCardCvc} value={cardCvc} type="text" name="cardCvc" placeholder="000" />
+                                        <input className='inputCvc' onChange={handleChangeCardCvc} onKeyUp={handleChangeCardCvc} onBlur={handleChangeCardCvc} value={cardCvc} type="text" name="cardCvc" placeholder="000" />
                                     </div>
                                     <div className="rightBuyCard">
                                         <div className="row justify-content-end">

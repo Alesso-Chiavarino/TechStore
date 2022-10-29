@@ -117,14 +117,14 @@ const NavBar = () => {
                             <FaSearch className='searchIcon' onClick={getSearch} />
                         </Link>
                     </div>
-                    <Link className='cart' to="/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={cartItemCounter()} /> </span> </Link>
+                    <Link className='cartIcon' to="/cart"> <span style={{ color: "#fff" }}> <CartWidget /> <Counter value={cartItemCounter()} /> </span> </Link>
 
                 </Container>
             </Navbar>
 
             <nav className='container-fluid navCategory' >
                 <div className='d-flex gap-1 align-items-center contSpanCategories' onMouseOver={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}  > <span className='spanCategories'>Categorias</span> {dropdown ? <FaChevronDown className='arrow' /> : <FaChevronUp className='arrow' />} </div>
-                <ul className='d-flex justify-content-center m-0'>
+                <ul className='d-flex ulMenuCategories justify-content-center m-0'>
                     {menuCategories.map((cat, i) => <MenuList key={i} section={cat.section} route={cat.route} />)}
                 </ul>
             </nav>

@@ -6,8 +6,8 @@ import { addDoc, collection, serverTimestamp, getDocs, query, where, documentId,
 import Loader from '../Loader/Loader'
 import ProductsCheckout from '../ProductsCheckout/ProductsCheckout'
 import PurchaseMessage from '../PurchaseMessage/PurchaseMessage'
-import {IoAlert} from 'react-icons/io5'
-import {RiAlertFill} from 'react-icons/ri'
+import { IoAlert } from 'react-icons/io5'
+import { RiAlertFill } from 'react-icons/ri'
 import emailjs from '@emailjs/browser';
 
 const Checkout = () => {
@@ -23,18 +23,6 @@ const Checkout = () => {
     const [orderID, setOrderID] = useState('')
     const [total, setTotal] = useState(0)
     const [loader, setLoader] = useState(false)
-
-    //estados formularios
-    // const [name, setName] = useState('Alessandro Chiavarino')
-    // const [email, setEmail] = useState('techstoreenterprise@gmail.com')
-    // const [phone, setPhone] = useState('3513079987')
-    // const [cardNumber, setCardNumber] = useState('1111111111111912')
-    // const [cardName, setCardName] = useState('Alessandro Chiavarino')
-    // const [cardCvc, setCardCvc] = useState('123')
-    // const [cardValidTHRU, setCardValidTHRU] = useState('1234')
-    // const [orderID, setOrderID] = useState('')
-    // const [total, setTotal] = useState(0)
-    // const [loader, setLoader] = useState(false)
 
     const { cart, deleteAllToCart, totalPrice } = useContext(CartContext)
 
@@ -56,16 +44,6 @@ const Checkout = () => {
     const [cardNameValidation, setCardNameValidation] = useState(false)
     const [cardCvcValidation, setCardCvcValidation] = useState(false)
     const [cardValidTHRUValidation, setCardValidTHRUValidation] = useState(false)
-
-    // const validaciones = {
-    //     name: false,
-    //     email: false,
-    //     phone: false,
-    //     cardNumber: false,
-    //     cardName: false,
-    //     cardCvc: false,
-    //     cardValid: false,
-    // }
 
     //referencias
     const nameAlert = useRef()
@@ -143,18 +121,16 @@ const Checkout = () => {
             e.preventDefault()
             wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-block'
         }
-        
+
     }
     const handleChangeName = (e) => {
         setName(e.target.value)
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
-        if(expresiones.name.test(name)) {
+        if (expresiones.name.test(name)) {
             setNameValidation(true)
-            // validaciones.name = true;
             nameAlert.current.className = 'd-none'
         } else {
             nameAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.name = false;
         }
     }
 
@@ -163,11 +139,9 @@ const Checkout = () => {
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.email.test(email)) {
             setEmailValidation(true)
-            // validaciones.email = true
             emailAlert.current.className = 'd-none'
         } else {
             emailAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.email = false;
         }
     }
 
@@ -176,11 +150,9 @@ const Checkout = () => {
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.phone.test(phone)) {
             setPhoneValidation(true)
-            // validaciones.phone = true
             phoneAlert.current.className = 'd-none'
         } else {
             phoneAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.phone = false;
         }
     }
 
@@ -189,11 +161,9 @@ const Checkout = () => {
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardNumber.test(cardNumber)) {
             setCardNumberValidation(true)
-            // validaciones.cardNumber = true
             cardNumberAlert.current.className = 'd-none'
         } else {
             cardNumberAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.cardNumber = false;
         }
     }
 
@@ -202,11 +172,9 @@ const Checkout = () => {
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardName.test(cardName)) {
             setCardNameValidation(true)
-            // validaciones.cardName = true
             cardNameAlert.current.className = 'd-none'
         } else {
             cardNameAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.cardName = false;
         }
     }
 
@@ -215,11 +183,9 @@ const Checkout = () => {
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardCvc.test(cardCvc)) {
             setCardCvcValidation(true)
-            // validaciones.cardCvc = true
             cardCvcAlert.current.className = 'd-none'
         } else {
             cardCvcAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.cardCvc = false;
         }
     }
 
@@ -228,11 +194,9 @@ const Checkout = () => {
         wrongFormAlert.current.className = 'bg-danger text-white rounded-1 p-1 d-none'
         if (expresiones.cardValid.test(cardValidTHRU)) {
             setCardValidTHRUValidation(true)
-            // validaciones.cardValid = true
             cardValidAlert.current.className = 'd-none'
         } else {
             cardValidAlert.current.className = 'd-flex align-items-center text-danger'
-            // validaciones.cardValid = false;
         }
     }
 
@@ -247,11 +211,11 @@ const Checkout = () => {
             user_email: email,
             order: orderID,
         };
-        
+
         emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, templateParams, process.env.REACT_APP_PUBLIC_KEY)
 
         return (
-            <PurchaseMessage name={name} email={email} phone={phone} total={total} cardNumber={cardNumber} orderID={orderID} />  
+            <PurchaseMessage name={name} email={email} phone={phone} total={total} cardNumber={cardNumber} orderID={orderID} />
         )
     }
 
@@ -270,17 +234,17 @@ const Checkout = () => {
                         <div className='d-flex flex-column'>
                             <label>Nombre</label>
                             <input onChange={handleChangeName} onKeyUp={handleChangeName} onBlur={handleChangeName} type="text" value={name} name="name" className='form-control mb-2' placeholder="John Doe" />
-                            <span className='text-danger mb-2 d-none' ref={nameAlert}><IoAlert/>El nombre no puede contener numeros</span>
+                            <span className='text-danger mb-2 d-none' ref={nameAlert}><IoAlert />El nombre no puede contener numeros</span>
                         </div>
                         <div className='d-flex flex-column'>
                             <label>Email</label>
                             <input onChange={handleChangeEmail} onKeyUp={handleChangeEmail} onBlur={handleChangeEmail} type="text" value={email} name="user_email" className='form-control mb-2' placeholder="john@gmail.com" />
-                            <span className='text-danger mb-2 d-none' ref={emailAlert}><IoAlert/>Dirección de correo electrónico incorrecto</span>
+                            <span className='text-danger mb-2 d-none' ref={emailAlert}><IoAlert />Dirección de correo electrónico incorrecto</span>
                         </div>
                         <div className='d-flex flex-column'>
                             <label>Telefono</label>
                             <input onChange={handleChangePhone} onKeyUp={handleChangePhone} onBlur={handleChangePhone} type="text" value={phone} name="phone" className='form-control mb-2' placeholder="3513079987" />
-                            <span className='text-danger mb-2 d-none' ref={phoneAlert}><IoAlert/>Numero de telefono debe contener al menos 7 números</span>
+                            <span className='text-danger mb-2 d-none' ref={phoneAlert}><IoAlert />Numero de telefono debe contener al menos 7 números</span>
                         </div>
 
                         <div className="datosPersonales_finalizarCompra">
@@ -309,13 +273,13 @@ const Checkout = () => {
                                     </div>
                                 </div>
                             </div>
-                            <span ref={wrongFormAlert} className='bg-danger text-white rounded-1 p-1 d-none'><RiAlertFill/> Por favor, ingrese los datos correctamente</span>
-                            <span className='text-danger mb-2 d-none' ref={cardNumberAlert}><IoAlert/>Numero de la tarjeta debe contener 16 números</span>
-                            <span className='text-danger mb-2 d-none' ref={cardNameAlert}><IoAlert/>Nombre de la tarjeta no debe contener números</span>
-                            <span className='text-danger mb-2 d-none' ref={cardCvcAlert}><IoAlert/>Codigo de seguridad debe contener 3 números</span>
-                            <span className='text-danger mb-2 d-none' ref={cardValidAlert}><IoAlert/>Fecha de vencimiento invalida</span>
+                            <span ref={wrongFormAlert} className='bg-danger text-white rounded-1 p-1 d-none'><RiAlertFill /> Por favor, ingrese los datos correctamente</span>
+                            <span className='text-danger mb-2 d-none' ref={cardNumberAlert}><IoAlert />Numero de la tarjeta debe contener 16 números</span>
+                            <span className='text-danger mb-2 d-none' ref={cardNameAlert}><IoAlert />Nombre de la tarjeta no debe contener números</span>
+                            <span className='text-danger mb-2 d-none' ref={cardCvcAlert}><IoAlert />Codigo de seguridad debe contener 3 números</span>
+                            <span className='text-danger mb-2 d-none' ref={cardValidAlert}><IoAlert />Fecha de vencimiento invalida</span>
                             <p className="text-bg-danger rounded-1 d-none"><i className="fa-solid fa-triangle-exclamation text-white mx-2"></i>Por favor, rellene los datos correctamente</p>
-                            <button className="btn btn-success mt-2 mb-5" type="submit" style={{background: nameValidation && emailValidation && phoneValidation && cardNumberValidation && cardNameValidation && cardCvcValidation && cardValidTHRUValidation? '#198754' : '#074617'}} onClick={() => window.scroll(0, 0)}>Confirmar compra</button> 
+                            <button className="btn btn-success mt-2 mb-5" type="submit" style={{ background: nameValidation && emailValidation && phoneValidation && cardNumberValidation && cardNameValidation && cardCvcValidation && cardValidTHRUValidation ? '#198754' : '#074617' }} onClick={() => window.scroll(0, 0)}>Confirmar compra</button>
                         </div>
                     </form>
                 </div>

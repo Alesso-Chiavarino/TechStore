@@ -3,10 +3,10 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Item from "../Item/Item";
 import { useState, useEffect } from 'react';
-import {collection, getDocs, where, query} from 'firebase/firestore'
+import { collection, getDocs, where, query } from 'firebase/firestore'
 import { db } from '../../services/firebaseConfig';
 
-const ProductsSlider = ({beg, fin}) => {
+const ProductsSlider = ({ beg, fin }) => {
 
     const responsive = {
 
@@ -30,7 +30,7 @@ const ProductsSlider = ({beg, fin}) => {
             slidesToSlide: 1,
         }
     };
-    
+
     const [prodsShow, setProdsShow] = useState([])
 
     useEffect(() => {
@@ -47,8 +47,8 @@ const ProductsSlider = ({beg, fin}) => {
                 setProdsShow(products)
             })
             .catch(eror => console.log(eror))
-    },[beg, fin])
-    
+    }, [beg, fin])
+
     return (
         <div className="container">
             <Carousel

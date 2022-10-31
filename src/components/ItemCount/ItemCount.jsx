@@ -1,8 +1,8 @@
 import './ItemCount.css'
-import {VscTriangleUp, VscTriangleDown} from 'react-icons/vsc'
+import { VscTriangleUp, VscTriangleDown } from 'react-icons/vsc'
 import { useEffect, useState } from 'react'
 
-const ItemCount = ({initial = 1, stock, onAdd, getCounter}) => {
+const ItemCount = ({ initial = 1, stock, onAdd, getCounter }) => {
 
     const [counter, setCounter] = useState(initial)
 
@@ -27,14 +27,15 @@ const ItemCount = ({initial = 1, stock, onAdd, getCounter}) => {
                 </div>
                 <div className='rightSideCounterIC'>
                     <button className="btnIC" disabled={counter === stock} > <VscTriangleUp className='arrowIC' onClick={() => {
-                        add()}}/>
+                        add()
+                    }} />
                     </button>
                     <button className="btnIC" disabled={counter === 1} > <VscTriangleDown className='arrowIC' onClick={() => {
                         subtract()
-                        if(counter > 1) {
+                        if (counter > 1) {
                             subtract()
                         }
-                        }}/>
+                    }} />
                     </button>
                 </div>
             </div>

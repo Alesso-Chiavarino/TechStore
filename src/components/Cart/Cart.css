@@ -31,8 +31,9 @@
     background: none;
     border: 0;
 }
+
 .btnElimarCart:hover {
-    color:rgb(29, 29, 29)
+    color: rgb(29, 29, 29)
 }
 
 .contCartEmpty {

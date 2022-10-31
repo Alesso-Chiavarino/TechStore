@@ -2,9 +2,11 @@
     font-size: 1.25em;
     margin: 0;
 }
+
 .icono {
     width: 3.125em;
 }
+
 .contIcono {
     display: flex;
     justify-content: center;

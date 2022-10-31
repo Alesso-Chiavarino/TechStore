@@ -28,7 +28,7 @@ const CartProvider = ({ children }) => {
 
     const addAmount = (prod) => {
         const uptdatedCart = cart.map(prodInCart => {
-            if(prodInCart.id === prod.id) {
+            if (prodInCart.id === prod.id) {
                 const updatedProduct = {
                     ...prodInCart,
                     quantity: prod.quantity
@@ -69,7 +69,7 @@ const CartProvider = ({ children }) => {
 
     const addQuantity = (id) => {
         const updatedCart = cart.map(prod => {
-            if((prod.id === id && prod.quantity < prod.stock)) {
+            if ((prod.id === id && prod.quantity < prod.stock)) {
                 const updatedProduct = {
                     ...prod, quantity: prod.quantity + 1
                 }
@@ -85,9 +85,9 @@ const CartProvider = ({ children }) => {
         const product = cart.find(prod => prod.id === id)
         return product?.quantity;
     }
-    
+
     return (
-        <CartContext.Provider value={{cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter, totalPrice, subtractQuantity, addQuantity, getProductQuantity}}>
+        <CartContext.Provider value={{ cart, addToCart, deleteToCart, deleteAllToCart, cartItemCounter, totalPrice, subtractQuantity, addQuantity, getProductQuantity }}>
             {children}
         </CartContext.Provider>
     )

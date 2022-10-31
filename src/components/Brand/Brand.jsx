@@ -1,7 +1,7 @@
 import './Brand.css'
 import { Link } from 'react-router-dom';
 
-const Brand = ( {img, title} ) => {
+const Brand = ({ img, title }) => {
     return (
         <div className='contIcono'>
             <Link className='linkBrand' to={'/'}>

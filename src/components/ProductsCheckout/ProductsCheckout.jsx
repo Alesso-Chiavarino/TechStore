@@ -10,7 +10,7 @@ const ProductsCheckout = () => {
         <>
             {cart.map(prod => {
                 return (
-                    <li style={{listStyle: 'none', display: 'contents'}} key={prod.id}>
+                    <li style={{ listStyle: 'none', display: 'contents' }} key={prod.id}>
                         <article className='mx-5 checkoutProd'>
                             <img style={{ width: '100px' }} src={prod.image} alt={prod.title} />
                             <span className='checkoutProdTitle'>{prod.title}</span>

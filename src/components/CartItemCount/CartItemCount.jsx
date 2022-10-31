@@ -1,11 +1,10 @@
-import './CartItemCount.css'
 import { useContext } from 'react'
-import {VscTriangleUp, VscTriangleDown} from 'react-icons/vsc'
+import { VscTriangleUp, VscTriangleDown } from 'react-icons/vsc'
 import { CartContext } from '../../context/CartContext'
 
-const CartItemCount = ({prod}) => {
+const CartItemCount = ({ prod }) => {
 
-    const {subtractQuantity, addQuantity} = useContext(CartContext);
+    const { subtractQuantity, addQuantity } = useContext(CartContext);
 
     return (
         <>

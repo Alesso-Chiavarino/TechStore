@@ -1,9 +1,9 @@
 import './DropdownMenuList.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FaChevronRight } from 'react-icons/fa'
 import { useState } from 'react'
 
-const DropdownMenuList = ({setDropdown}) => {
+const DropdownMenuList = ({ setDropdown }) => {
 
     const [subcategory1, setSubcategory1] = useState(false);
     const [subcategory2, setSubcategory2] = useState(false);
@@ -48,31 +48,69 @@ const DropdownMenuList = ({setDropdown}) => {
     },
     ]
 
+    const notebooks = [{
+        section: "Asus",
+        route: "/category/notebooks-asus"
+    },
+    {
+        section: "Lenovo",
+        route: "/category/notebooks-lenovo"
+    },
+    ]
+
+    const peripherals = [{
+        section: "Teclados",
+        route: "/category/teclados"
+    },
+    {
+        section: "Monitores",
+        route: "/category/monitores"
+    },
+    {
+        section: "Mouses",
+        route: "/category/mouses"
+    },
+    {
+        section: "Mousepads",
+        route: "/category/mousepads"
+    }
+    ]
+
+    const phones = [{
+        section: "Apple",
+        route: "/category/apple"
+    },
+    {
+        section: "Samsung",
+        route: "/category/celulares-samsung"
+    }
+    ]
+
     return (
         <>
             <div className='d-flex flex-row' onMouseOver={() => setSubcategory1(true)} onMouseLeave={() => setSubcategory1(false)}>
                 <li className='LiDrowpdownLinkCategory w-100' >
                     <Link className="DrowpdownlinkCategory" to=""> Componentes de PC <FaChevronRight className='text-white mt-1 float-end' /> </Link>
                 </li>
-                {subcategory1 && <ul className='contSubcategory'>{components.map((comp, i) => <li key={i} onClick={() => {setSubcategory1(false); setDropdown(false)}} className='LisubcategoryLink'><Link to={`${comp.route}`} className='subcategoryLink'>{comp.section}</Link></li>)}</ul>}
+                {subcategory1 && <ul className='contSubcategory'>{components.map((comp, i) => <li key={i} onClick={() => { setSubcategory1(false); setDropdown(false) }} className='LisubcategoryLink'><Link to={`${comp.route}`} className='subcategoryLink'>{comp.section}</Link></li>)}</ul>}
             </div>
-            <div className='d-flex flex-row'>
-                <li className='LiDrowpdownLinkCategory w-100' onMouseOver={() => setSubcategory2(true)} onMouseLeave={() => setSubcategory2(false)} >
+            <div className='d-flex flex-row' onMouseOver={() => setSubcategory2(true)} onMouseLeave={() => setSubcategory2(false)}>
+                <li className='LiDrowpdownLinkCategory w-100' >
                     <Link className="DrowpdownlinkCategory" to=""> Notebooks <FaChevronRight className='text-white mt-1 float-end' /> </Link>
                 </li>
-                {subcategory2 && <div className='contSubcategory'>hola</div>}
+                {subcategory2 && <ul className='contSubcategory'>{notebooks.map((note, i) => <li key={i} onClick={() => { setSubcategory2(false); setDropdown(false) }} className='LisubcategoryLink'><Link to={`${note.route}`} className='subcategoryLink'>{note.section}</Link></li>)}</ul>}
             </div>
-            <div className='d-flex flex-row'>
-                <li className='LiDrowpdownLinkCategory w-100' onMouseOver={() => setSubcategory3(true)} onMouseLeave={() => setSubcategory3(false)} >
+            <div className='d-flex flex-row' onMouseOver={() => setSubcategory3(true)} onMouseLeave={() => setSubcategory3(false)}>
+                <li className='LiDrowpdownLinkCategory w-100' >
                     <Link className="DrowpdownlinkCategory" to=""> Periféricos <FaChevronRight className='text-white mt-1 float-end' /> </Link>
                 </li>
-                {subcategory3 && <div className='contSubcategory'>hola</div>}
+                {subcategory3 && <ul className='contSubcategory'>{peripherals.map((peri, i) => <li key={i} onClick={() => { setSubcategory3(false); setDropdown(false) }} className='LisubcategoryLink'><Link to={`${peri.route}`} className='subcategoryLink'>{peri.section}</Link></li>)}</ul>}
             </div>
-            <div className='d-flex flex-row'>
-                <li className='LiDrowpdownLinkCategory w-100' onMouseOver={() => setSubcategory4(true)} onMouseLeave={() => setSubcategory4(false)} >
+            <div className='d-flex flex-row' onMouseOver={() => setSubcategory4(true)} onMouseLeave={() => setSubcategory4(false)}>
+                <li className='LiDrowpdownLinkCategory w-100' >
                     <Link className="DrowpdownlinkCategory" to=""> Celulares y Telefonía <FaChevronRight className='text-white mt-1 float-end' /> </Link>
                 </li>
-                {subcategory4 && <div className='contSubcategory'>hola</div>}
+                {subcategory4 && <ul className='contSubcategory'>{phones.map((phone, i) => <li key={i} onClick={() => { setSubcategory3(false); setDropdown(false) }} className='LisubcategoryLink'><Link to={`${phone.route}`} className='subcategoryLink'>{phone.section}</Link></li>)}</ul>}
             </div>
         </>
     );

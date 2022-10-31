@@ -4,7 +4,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './CartItem.scss'
 
-const CartItem = ({prod, deleteToCart}) => {
+const CartItem = ({ prod, deleteToCart }) => {
     return (
         <article className='w-100'>
             <li className='contProdCart' >

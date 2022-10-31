@@ -18,9 +18,9 @@
 }
 
 .cardDetail {
-    -webkit-box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0,0,0,1);
-    -moz-box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0,0,0,1);
-    box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0,0,0,1);
+    -webkit-box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0, 0, 0, 1);
+    box-shadow: 0.25em 0.125em 0.8125em -0.4375em rgba(0, 0, 0, 1);
 }
 
 .imgID {
@@ -49,7 +49,12 @@
     margin-top: 0.9375em;
 }
 
-.mercadoPagoIcon, .naranjaIcon, .visaIcon, .americanExpressIcon,.mastercardIconn, .brubankIcon {
+.mercadoPagoIcon,
+.naranjaIcon,
+.visaIcon,
+.americanExpressIcon,
+.mastercardIconn,
+.brubankIcon {
     margin-top: 0.625em;
     width: 5.3125em;
     margin-right: 1.25em;

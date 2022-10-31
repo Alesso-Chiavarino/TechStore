@@ -5,9 +5,9 @@ import { useContext, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import {RiArrowGoBackLine} from 'react-icons/ri'
+import { RiArrowGoBackLine } from 'react-icons/ri'
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({ product }) => {
 
     const notify = (quantity) => toast(`Se agregó ${quantity} ${product.title} al carrito!`, {
         position: "bottom-right",
@@ -18,9 +18,9 @@ const ItemDetail = ({product}) => {
         draggable: true,
         progress: undefined,
         theme: "light",
-        });
+    });
 
-    const {addToCart, getProductQuantity} = useContext(CartContext);
+    const { addToCart, getProductQuantity } = useContext(CartContext);
 
     const quant = getProductQuantity(product.id)
 
@@ -32,7 +32,7 @@ const ItemDetail = ({product}) => {
     const navigate = useNavigate();
     const goToCart = () => {
         navigate('/cart');
-        window.scroll(0,0);
+        window.scroll(0, 0);
     }
 
     const [subtotal, setSubtotal] = useState(1)
@@ -41,10 +41,10 @@ const ItemDetail = ({product}) => {
         setSubtotal(counter * product.price)
     }
 
-  return (
-      <>
-          <article className='cardDetail mb-5 container bg-white p-3 rounded-2'>
-                <button className='btn' onClick={() => navigate(-1) } ><RiArrowGoBackLine/></button>
+    return (
+        <>
+            <article className='cardDetail mb-5 container bg-white p-3 rounded-2'>
+                <button className='btn' onClick={() => navigate(-1)} ><RiArrowGoBackLine /></button>
                 <div className='topSide'>
                     <div className="leftSide">
                         <div className="contImgID">
@@ -54,7 +54,7 @@ const ItemDetail = ({product}) => {
                     <div className="rightSide">
                         <h2 className='productNameID' >{product.title}</h2>
                         <span className='priceID' >${product.price}</span>
-                       
+
                         <hr />
                         <div className='payWith'>
                             <span className='messageID' >Medios de pago</span>
@@ -79,10 +79,10 @@ const ItemDetail = ({product}) => {
                     <h5>Descrición</h5>
                     <span className='descriptID'>{product.description}</span>
                 </div>
-          </article>
-          <ToastContainer onClick={goToCart} style={{"zIndex": 4545545}} />
-      </>
-  )
+            </article>
+            <ToastContainer onClick={goToCart} style={{ "zIndex": 4545545 }} />
+        </>
+    )
 }
 
 export default ItemDetail;

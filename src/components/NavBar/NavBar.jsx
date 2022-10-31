@@ -79,23 +79,19 @@ const NavBar = () => {
         //si presiono enter...
         if (e.keyCode === 13) {
             getProducts();
-            window.scroll(0,0);
+            window.scroll(0, 0);
             writeText(inputRef.current.value)
             inputRef.current.value = ''
             navigate('/search')
         }
     }
-    
-    //   console.log(search.length)
+
     // para contador de carrito dinamico
-    const {cartItemCounter} = useContext(CartContext);
+    const { cartItemCounter } = useContext(CartContext);
 
     //dropdown
     const [dropdown, setDropdown] = useState(false);
 
-    
-    
-    
 
     return (
         <>

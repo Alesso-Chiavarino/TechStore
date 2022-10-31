@@ -42,8 +42,8 @@ npm install
 npm start
 ```
 
-<<<<<<< HEAD
 4. Enjoy!
-=======
-4. Enjoy!
->>>>>>> 6132c99607aa8851e33cca7ab3ee09ffb0247843
+
+###### if you need the environment variables, please private me.
+
+#### - Created by Alessandro Chiavarino -

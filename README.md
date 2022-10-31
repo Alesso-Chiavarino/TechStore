@@ -44,5 +44,6 @@ npm start
 
 4. Enjoy!
 
+###### if you need the environment variables, please private me.
 
 #### - Created by Alessandro Chiavarino -

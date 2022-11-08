@@ -65,18 +65,19 @@ const Footer = () => {
             {/* hacer componente */}
             <section className="redes-sociales">
               <div className="contenedor-redes">
-                <a className="twitter" rel="noreferrer" href="https://twitter.com/alesso_1912" target="_blank"><FaTwitter /></a>
-                <a className="github" rel="noreferrer" href="https://github.com/Alesso-Chiavarino"
+                <a className="twitter" rel="noreferrer" href="#" target="_blank"><FaTwitter /></a>
+                <a className="github" rel="noreferrer" href="#"
                   target="_blank"><FaGithub /></a>
-                <a className="instagram" rel="noreferrer" href="https://www.instagram.com/alesso_chiavarino/"
+                <a className="instagram" rel="noreferrer" href="#"
                   target="_blank"><FaInstagram /></a>
-                <a className="whatsapp" rel="noreferrer" href="https://wa.me/3513079987" target="_blank"><FaWhatsapp /></a>
+                <a className="whatsapp" rel="noreferrer" href="#" target="_blank"><FaWhatsapp /></a>
+                {/* <a className="whatsapp" rel="noreferrer" href="https://wa.me/3513079987" target="_blank"><FaWhatsapp /></a> */}
               </div>
             </section>
           </div>
           <div className="col-xs-12 pt-4">
             <hr />
-            <p className="text-white text-center">© 2022 Alessandro Chiavarino - Todos los Derechos Resevados</p>
+            <p className="text-white text-center">© 2022 Diego Escudero - Todos los Derechos Resevados</p>
           </div>
         </div>
       </footer>

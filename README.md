@@ -46,4 +46,4 @@ npm start
 
 ###### if you need the environment variables, please private me.
 
-#### - Created by Diego Escudero -
+#### - Created by Alessandro Chiavarino -
